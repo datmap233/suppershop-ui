@@ -1,3 +1,5 @@
+import images from '~/assets/images';
+
 function Header() {
     return (
         <div className="header">
@@ -5,8 +7,8 @@ function Header() {
                 <div className="row">
                     <div className="col-md-2 col-sm-2">
                         <div className="logo">
-                            <a href="index.html">
-                                <img src="images/logo.png" alt="SuperShop" />
+                            <a href="/">
+                                <img src={images.logo} alt="SuperShop" />
                             </a>
                         </div>
                     </div>
@@ -16,7 +18,12 @@ function Header() {
                                 <div className="col-md-3">
                                     <ul className="option_nav">
                                         <li className="dorpdown">
-                                            <a href="/">Eng</a>
+                                            <a
+                                                href="/"
+                                                style={{ background: `url(${images.downArow}) right 13px no-repeat` }}
+                                            >
+                                                Eng
+                                            </a>
                                             <ul className="subnav">
                                                 <li>
                                                     <a href="/">Eng</a>
@@ -73,12 +80,20 @@ function Header() {
                                 <div className="col-md-3">
                                     <ul className="usermenu">
                                         <li>
-                                            <a href="checkout.html" className="log">
+                                            <a
+                                                href="checkout.html"
+                                                className="log"
+                                                style={{ background: `url(${images.loginbg}) left top no-repeat` }}
+                                            >
                                                 Login
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="checkout2.html" className="reg">
+                                            <a
+                                                href="checkout2.html"
+                                                className="reg"
+                                                style={{ background: `url(${images.regbg}) left top no-repeat` }}
+                                            >
                                                 Register
                                             </a>
                                         </li>
@@ -91,7 +106,12 @@ function Header() {
                             <ul className="option">
                                 <li id="search" className="search">
                                     <form>
-                                        <input className="search-submit" type="submit" value="" />
+                                        <input
+                                            className="search-submit"
+                                            type="submit"
+                                            value=""
+                                            style={{ background: `url(${images.searchBg}) center center no-repeat` }}
+                                        />
                                         <input
                                             className="search-input"
                                             placeholder="Enter your search term..."
@@ -102,14 +122,14 @@ function Header() {
                                     </form>
                                 </li>
                                 <li className="option-cart">
-                                    <a href="/" className="cart-icon">
+                                    <a href="/" className="cart-icon" style={{ background: `url(${images.carticon}) center center no-repeat` }}>
                                         cart <span className="cart_no">02</span>
                                     </a>
                                     <ul className="option-cart-item">
                                         <li>
                                             <div className="cart-item">
                                                 <div className="image">
-                                                    <img src="images/products/thum/products-01.png" alt="" />
+                                                    <img src={images.products01Thum} alt="" />
                                                 </div>
                                                 <div className="item-description">
                                                     <p className="name">Lincoln chair</p>
@@ -122,7 +142,7 @@ function Header() {
                                                 <div className="right">
                                                     <p className="price">$30.00</p>
                                                     <a href="/" className="remove">
-                                                        <img src="images/remove.png" alt="remove" />
+                                                        <img src={images.remove} alt="remove" />
                                                     </a>
                                                 </div>
                                             </div>
@@ -130,7 +150,7 @@ function Header() {
                                         <li>
                                             <div className="cart-item">
                                                 <div className="image">
-                                                    <img src="images/products/thum/products-02.png" alt="" />
+                                                    <img src={images.products02Thum} alt="" />
                                                 </div>
                                                 <div className="item-description">
                                                     <p className="name">Lincoln chair</p>
@@ -143,7 +163,7 @@ function Header() {
                                                 <div className="right">
                                                     <p className="price">$30.00</p>
                                                     <a href="/" className="remove">
-                                                        <img src="images/remove.png" alt="remove" />
+                                                        <img src={images.remove} alt="remove" />
                                                     </a>
                                                 </div>
                                             </div>

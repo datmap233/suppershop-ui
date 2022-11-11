@@ -1,3 +1,6 @@
+import images from "~/assets/images";
+import Button from "~/components/Button";
+
 function Header() {
     return (
         <div class="footer">
@@ -5,7 +8,7 @@ function Header() {
                <div class="container">
                   <div class="row">
                      <div class="col-md-3">
-                        <div class="footer-logo"><a href="/"><img src="images/logo.png" alt=""/></a></div>
+                        <div class="footer-logo"><Button href="/"><img src={images.logo} alt=""/></Button></div>
                      </div>
                      <div class="col-md-3 col-sm-6">
                         <h4 class="title">Contact <strong>Info</strong></h4>

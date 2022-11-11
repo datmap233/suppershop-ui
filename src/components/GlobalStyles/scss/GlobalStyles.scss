@@ -354,6 +354,8 @@ button:hover {
     background-size: cover;
     -webkit-background-size: cover;
     background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 #home .header {
     background: black;

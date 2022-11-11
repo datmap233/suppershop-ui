@@ -1,3 +1,5 @@
+import images from "~/assets/images";
+
 function Home() {
     return (
         <>
@@ -27,12 +29,12 @@ function Home() {
                                     </p>
                                 </div>
                                 <div className="flat-button caption4 formLeft delay600 text-center">
-                                    <a className="more" href="/">
+                                    <a className="more" href="/" style={{backgroundImage: `url(${images.moreIcon}) right 10px top 7px no-repeat`}}>
                                         More Details
                                     </a>
                                 </div>
                                 <div className="flat-image formBottom delay200" data-duration="5" data-bottom="true">
-                                    <img src="./slider-image-01.png" alt="" />
+                                    <img src={images.sliderImage01} alt="" />
                                 </div>
                             </li>
                             <li>
@@ -52,7 +54,7 @@ function Home() {
                                     </a>
                                 </div>
                                 <div className="flat-image formBottom delay200" data-bottom="true">
-                                    <img src="images/slider-image-02.png" alt="" />
+                                    <img src={images.sliderImage02} alt="" />
                                 </div>
                             </li>
                             <li>
@@ -72,28 +74,28 @@ function Home() {
                                     </a>
                                 </div>
                                 <div className="flat-image formBottom delay200" data-bottom="true">
-                                    <img src="images/slider-image-03.png" alt="" />
+                                    <img src={images.sliderImage03} alt="" />
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div className="promotion-banner">
+                <div className="promotion-banner" style={{backgroundImage: `url(${images.black_transparent50}) left top repeat`}}>
                     <div className="container">
                         <div className="row">
                             <div className="col-md-4 col-sm-4 col-xs-4">
                                 <div className="promo-box">
-                                    <img src="images/promotion-01.jpeg" alt="" />
+                                    <img src={images.promotion01} alt="" />
                                 </div>
                             </div>
                             <div className="col-md-4 col-sm-4 col-xs-4">
                                 <div className="promo-box">
-                                    <img src="images/promotion-02.jpeg" alt="" />
+                                    <img src={images.promotion02} alt="" />
                                 </div>
                             </div>
                             <div className="col-md-4 col-sm-4 col-xs-4">
                                 <div className="promo-box">
-                                    <img src="images/promotion-03.jpeg" alt="" />
+                                    <img src={images.promotion03} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -108,10 +110,10 @@ function Home() {
                             <strong>Hot</strong> Products
                         </h3>
                         <div className="control">
-                            <a id="prev_hot" className="prev" href="/">
+                            <a id="prev_hot" className="prev" href="/" style={{backgroundImage: `url(${images.arow_left}) left top no-repeat`}}>
                                 &lt;
                             </a>
-                            <a id="next_hot" className="next" href="/">
+                            <a id="next_hot" className="next" href="/" style={{backgroundImage: `url(${images.arow_right}) left top no-repeat`}}>
                                 &gt;
                             </a>
                         </div>
@@ -124,7 +126,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-01.png"
+                                                        src={images.products01Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -149,7 +151,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-02.png"
+                                                        src={images.products02Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -175,7 +177,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-03.png"
+                                                        src={images.products03Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -200,7 +202,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-04.png"
+                                                        src={images.products04Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -230,7 +232,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-01.png"
+                                                        src={images.products01Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -255,7 +257,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-02.png"
+                                                        src={images.products02Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -281,7 +283,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-03.png"
+                                                        src={images.products03Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -306,7 +308,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-04.png"
+                                                        src={images.products04Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -351,7 +353,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-05.png"
+                                                        src={images.products05Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -376,7 +378,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-06.png"
+                                                        src={images.products06Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -402,7 +404,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-07.png"
+                                                        src={images.products07Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -427,7 +429,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-04.png"
+                                                        src={images.products04Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -456,7 +458,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-01.png"
+                                                        src={images.products01Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -481,7 +483,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-02.png"
+                                                        src={images.products02Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -506,7 +508,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-03.png"
+                                                        src={images.products03Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -531,7 +533,7 @@ function Home() {
                                             <div className="thumbnail">
                                                 <a href="details.html">
                                                     <img
-                                                        src="images/products/small/products-04.png"
+                                                        src={images.products04Small}
                                                         alt="Product Name"
                                                     />
                                                 </a>
@@ -574,35 +576,35 @@ function Home() {
                                     <li>
                                         <a href="/">
                                             <div className="brand-logo">
-                                                <img src="images/envato.png" alt="" />
+                                                <img src={images.envato} alt="" />
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/">
                                             <div className="brand-logo">
-                                                <img src="images/themeforest.png" alt="" />
+                                                <img src={images.themeforest} alt="" />
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/">
                                             <div className="brand-logo">
-                                                <img src="images/photodune.png" alt="" />
+                                                <img src={images.photodune} alt="" />
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/">
                                             <div className="brand-logo">
-                                                <img src="images/activeden.png" alt="" />
+                                                <img src={images.activeden} alt="" />
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/">
                                             <div className="brand-logo">
-                                                <img src="images/envato.png" alt="" />
+                                                <img src={images.envato} alt="" />
                                             </div>
                                         </a>
                                     </li>
@@ -613,35 +615,35 @@ function Home() {
                                     <li>
                                         <a href="/">
                                             <div className="brand-logo">
-                                                <img src="images/envato.png" alt="" />
+                                                <img src={images.envato} alt="" />
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/">
                                             <div className="brand-logo">
-                                                <img src="images/themeforest.png" alt="" />
+                                                <img src={images.themeforest} alt="" />
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/">
                                             <div className="brand-logo">
-                                                <img src="images/photodune.png" alt="" />
+                                                <img src={images.photodune} alt="" />
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/">
                                             <div className="brand-logo">
-                                                <img src="images/activeden.png" alt="" />
+                                                <img src={images.activeden} alt="" />
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/">
                                             <div className="brand-logo">
-                                                <img src="images/envato.png" alt="" />
+                                                <img src={images.envato} alt="" />
                                             </div>
                                         </a>
                                     </li>
