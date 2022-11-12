@@ -1,10 +1,10 @@
 import config from '~/config/';
 
 //Layout
-import Home from '~/pages/Home';
+import HomePage from '~/pages/Home';
 
 const publicRoutes = [
-    { path: config.routes.home, components: Home },
+    { path: config.routes.home, components: HomePage },
 ];
 const privateRoutes = [];
 
