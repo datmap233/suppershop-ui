@@ -7,7 +7,7 @@ import images from './assets/images';
 function App() {
     return (
         <div id="home" style={{backgroundImage: `url(${images.bg})`}}>
-            <div class="wrapper">
+            <div className="wrapper">
                 <Router>
                     <div className="App">
                         <Routes>

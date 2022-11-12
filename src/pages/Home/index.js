@@ -29,7 +29,7 @@ function Home() {
                                     </p>
                                 </div>
                                 <div className="flat-button caption4 formLeft delay600 text-center">
-                                    <a className="more" href="/" style={{backgroundImage: `url(${images.moreIcon}) right 10px top 7px no-repeat`}}>
+                                    <a className="more" href="/" style={{background: `url(${images.moreIcon}) right 10px top 7px no-repeat`}}>
                                         More Details
                                     </a>
                                 </div>
@@ -80,7 +80,7 @@ function Home() {
                         </ul>
                     </div>
                 </div>
-                <div className="promotion-banner" style={{backgroundImage: `url(${images.black_transparent50}) left top repeat`}}>
+                <div className="promotion-banner" style={{background: `url(${images.black_transparent50}) left top repeat`}}>
                     <div className="container">
                         <div className="row">
                             <div className="col-md-4 col-sm-4 col-xs-4">
@@ -110,10 +110,10 @@ function Home() {
                             <strong>Hot</strong> Products
                         </h3>
                         <div className="control">
-                            <a id="prev_hot" className="prev" href="/" style={{backgroundImage: `url(${images.arow_left}) left top no-repeat`}}>
+                            <a id="prev_hot" className="prev" href="/" style={{background: `url(${images.arow_left}) left top no-repeat`}}>
                                 &lt;
                             </a>
-                            <a id="next_hot" className="next" href="/" style={{backgroundImage: `url(${images.arow_right}) left top no-repeat`}}>
+                            <a id="next_hot" className="next" href="/" style={{background: `url(${images.arow_right}) left top no-repeat`}}>
                                 &gt;
                             </a>
                         </div>

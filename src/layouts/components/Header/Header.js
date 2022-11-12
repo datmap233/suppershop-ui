@@ -1,15 +1,53 @@
 import images from '~/assets/images';
+import Button from '~/components/Button';
+
+import Dropdown from './Dropdown';
+import DropdownMenu from './DropdownMenu';
 
 function Header() {
+    const list_lang = [
+        {
+            title: 'Eng',
+            link: '/',
+        },
+        {
+            title: 'Vns',
+            link: '/',
+        },
+        {
+            title: 'Fer',
+            link: '/',
+        },
+        {
+            title: 'Gem',
+            link: '/',
+        },
+    ];
+
+    const list_price = [
+        {
+            title: 'USD',
+            link: '/',
+        },
+        {
+            title: 'UKD',
+            link: '/',
+        },
+        {
+            title: 'FER',
+            link: '/',
+        }
+    ];
+
     return (
         <div className="header">
             <div className="container">
                 <div className="row">
                     <div className="col-md-2 col-sm-2">
                         <div className="logo">
-                            <a href="/">
+                            <Button href="/">
                                 <img src={images.logo} alt="SuperShop" />
-                            </a>
+                            </Button>
                         </div>
                     </div>
                     <div className="col-md-10 col-sm-10">
@@ -17,85 +55,54 @@ function Header() {
                             <div className="row">
                                 <div className="col-md-3">
                                     <ul className="option_nav">
-                                        <li className="dorpdown">
-                                            <a
-                                                href="/"
-                                                style={{ background: `url(${images.downArow}) right 13px no-repeat` }}
-                                            >
-                                                Eng
-                                            </a>
-                                            <ul className="subnav">
-                                                <li>
-                                                    <a href="/">Eng</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/">Vns</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/">Fer</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/">Gem</a>
-                                                </li>
-                                            </ul>
+                                        <li className="dropdown">
+                                            <Dropdown list={list_lang}/>
                                         </li>
-                                        <li className="dorpdown">
-                                            <a href="/">USD</a>
-                                            <ul className="subnav">
-                                                <li>
-                                                    <a href="/">USD</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/">UKD</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/">FER</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                        <li className="dropdown">
+                                            <Dropdown list={list_price}/>                                        </li>
                                     </ul>
                                 </div>
                                 <div className="col-md-6">
                                     <ul className="topmenu">
                                         <li>
-                                            <a href="/">About Us</a>
+                                            <Button href="/">About Us</Button>
                                         </li>
                                         <li>
-                                            <a href="/">News</a>
+                                            <Button href="/">News</Button>
                                         </li>
                                         <li>
-                                            <a href="/">Service</a>
+                                            <Button href="/">Service</Button>
                                         </li>
                                         <li>
-                                            <a href="/">Recruiment</a>
+                                            <Button href="/">Recruiment</Button>
                                         </li>
                                         <li>
-                                            <a href="/">Media</a>
+                                            <Button href="/">Media</Button>
                                         </li>
                                         <li>
-                                            <a href="/">Support</a>
+                                            <Button href="/">Support</Button>
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="col-md-3">
                                     <ul className="usermenu">
                                         <li>
-                                            <a
+                                            <Button
                                                 href="checkout.html"
                                                 className="log"
                                                 style={{ background: `url(${images.loginbg}) left top no-repeat` }}
                                             >
                                                 Login
-                                            </a>
+                                            </Button>
                                         </li>
                                         <li>
-                                            <a
+                                            <Button
                                                 href="checkout2.html"
                                                 className="reg"
                                                 style={{ background: `url(${images.regbg}) left top no-repeat` }}
                                             >
                                                 Register
-                                            </a>
+                                            </Button>
                                         </li>
                                     </ul>
                                 </div>
@@ -122,9 +129,13 @@ function Header() {
                                     </form>
                                 </li>
                                 <li className="option-cart">
-                                    <a href="/" className="cart-icon" style={{ background: `url(${images.carticon}) center center no-repeat` }}>
+                                    <Button
+                                        href="/"
+                                        className="cart-icon"
+                                        style={{ background: `url(${images.carticon}) center center no-repeat` }}
+                                    >
                                         cart <span className="cart_no">02</span>
-                                    </a>
+                                    </Button>
                                     <ul className="option-cart-item">
                                         <li>
                                             <div className="cart-item">
@@ -141,9 +152,9 @@ function Header() {
                                                 </div>
                                                 <div className="right">
                                                     <p className="price">$30.00</p>
-                                                    <a href="/" className="remove">
+                                                    <Button href="/" className="remove">
                                                         <img src={images.remove} alt="remove" />
-                                                    </a>
+                                                    </Button>
                                                 </div>
                                             </div>
                                         </li>
@@ -162,9 +173,9 @@ function Header() {
                                                 </div>
                                                 <div className="right">
                                                     <p className="price">$30.00</p>
-                                                    <a href="/" className="remove">
+                                                    <Button href="/" className="remove">
                                                         <img src={images.remove} alt="remove" />
-                                                    </a>
+                                                    </Button>
                                                 </div>
                                             </div>
                                         </li>
@@ -194,118 +205,82 @@ function Header() {
                             </div>
                             <div className="navbar-collapse collapse">
                                 <ul className="nav navbar-nav">
-                                    <li className="active dropdown">
-                                        <a href="/" className="dropdown-toggle" data-toggle="dropdown">
-                                            Home
-                                        </a>
-                                        <div className="dropdown-menu">
-                                            <ul className="mega-menu-links">
-                                                <li>
-                                                    <a href="index.html">home</a>
-                                                </li>
-                                                <li>
-                                                    <a href="home2.html">home2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="home3.html">home3</a>
-                                                </li>
-                                                <li>
-                                                    <a href="productlitst.html">Productlitst</a>
-                                                </li>
-                                                <li>
-                                                    <a href="productgird.html">Productgird</a>
-                                                </li>
-                                                <li>
-                                                    <a href="details.html">Details</a>
-                                                </li>
-                                                <li>
-                                                    <a href="cart.html">Cart</a>
-                                                </li>
-                                                <li>
-                                                    <a href="checkout.html">CheckOut</a>
-                                                </li>
-                                                <li>
-                                                    <a href="checkout2.html">CheckOut2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="contact.html">contact</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                    <li>
+                                        <DropdownMenu />
                                     </li>
                                     <li>
-                                        <a href="productgird.html">men</a>
+                                        <Button href="productgird.html">men</Button>
                                     </li>
                                     <li>
-                                        <a href="productlitst.html">women</a>
+                                        <Button href="productlitst.html">women</Button>
                                     </li>
-                                    <li className="dropdown">
-                                        <a href="/" className="dropdown-toggle" data-toggle="dropdown">
+                                    {/* <li className="dropdown">
+                                        <Button href="/" className="dropdown-toggle" data-toggle="dropdown">
                                             Fashion
-                                        </a>
-                                        <div className="dropdown-menu mega-menu">
+                                        </Button>
+                                        <div className="dropdown-menuu mega-menu">
                                             <div className="row">
                                                 <div className="col-md-6 col-sm-6">
                                                     <ul className="mega-menu-links">
                                                         <li>
-                                                            <a href="productgird.html">New Collection</a>
+                                                            <Button href="productgird.html">New Collection</Button>
                                                         </li>
                                                         <li>
-                                                            <a href="productgird.html">Shirts & tops</a>
+                                                            <Button href="productgird.html">Shirts & tops</Button>
                                                         </li>
                                                         <li>
-                                                            <a href="productgird.html">Laptop & Brie</a>
+                                                            <Button href="productgird.html">Laptop & Brie</Button>
                                                         </li>
                                                         <li>
-                                                            <a href="productgird.html">Dresses</a>
+                                                            <Button href="productgird.html">Dresses</Button>
                                                         </li>
                                                         <li>
-                                                            <a href="productgird.html">Blazers & Jackets</a>
+                                                            <Button href="productgird.html">Blazers & Jackets</Button>
                                                         </li>
                                                         <li>
-                                                            <a href="productgird.html">Shoulder Bags</a>
+                                                            <Button href="productgird.html">Shoulder Bags</Button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div className="col-md-6 col-sm-6">
                                                     <ul className="mega-menu-links">
                                                         <li>
-                                                            <a href="productgird.html">New Collection</a>
+                                                            <Button href="productgird.html">New Collection</Button>
                                                         </li>
                                                         <li>
-                                                            <a href="productgird.html">Shirts & tops</a>
+                                                            <Button href="productgird.html">Shirts & tops</Button>
                                                         </li>
                                                         <li>
-                                                            <a href="productgird.html">Laptop & Brie</a>
+                                                            <Button href="productgird.html">Laptop & Brie</Button>
                                                         </li>
                                                         <li>
-                                                            <a href="productgird.html">Dresses</a>
+                                                            <Button href="productgird.html">Dresses</Button>
                                                         </li>
                                                         <li>
-                                                            <a href="productgird.html">Blazers & Jackets</a>
+                                                            <Button href="productgird.html">Blazers & Jackets</Button>
                                                         </li>
                                                         <li>
-                                                            <a href="productgird.html">Shoulder Bags</a>
+                                                            <Button href="productgird.html">Shoulder Bags</Button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
+                                    </li> */}
+                                    <li>
+                                        <Button href="productgird.html">gift</Button>
                                     </li>
                                     <li>
-                                        <a href="productgird.html">gift</a>
+                                        <Button href="productgird.html">kids</Button>
                                     </li>
                                     <li>
-                                        <a href="productgird.html">kids</a>
+                                        <Button href="productgird.html">blog</Button>
                                     </li>
                                     <li>
-                                        <a href="productgird.html">blog</a>
+                                        <Button href="productgird.html">jewelry</Button>
                                     </li>
                                     <li>
-                                        <a href="productgird.html">jewelry</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">contact us</a>
+                                        <Button href="contact.html">contact us</Button>
                                     </li>
                                 </ul>
                             </div>

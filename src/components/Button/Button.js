@@ -1,8 +1,5 @@
-import classNames from 'classnames/bind';
-import styles from './Button.module.scss';
+import './Button.scss';
 import { Link } from 'react-router-dom';
-
-const cx = classNames.bind(styles);
 
 function Button({ to, href, disable = false, children, className, onClick, ...passProps }) {
     let Comp = 'button';
@@ -28,7 +25,7 @@ function Button({ to, href, disable = false, children, className, onClick, ...pa
         Comp = 'a';
     }
 
-    const classes = cx('wrapper', {
+    const classes = ('wrapper', {
         [className]: className,
     });
 
