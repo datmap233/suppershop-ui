@@ -25,12 +25,8 @@ function Button({ to, href, disable = false, children, className, onClick, ...pa
         Comp = 'a';
     }
 
-    const classes = ('wrapper', {
-        [className]: className,
-    });
-
     return (
-        <Comp className={classes} {...props}>
+        <Comp className={className} {...props}>
             {children}
         </Comp>
     );

@@ -1,8 +1,10 @@
 import images from '~/assets/images';
 import Button from '~/components/Button';
+import Cart from './Cart';
 
 import Dropdown from './Dropdown';
 import DropdownMenu from './DropdownMenu';
+import Search from './Search';
 
 function Header() {
     const list_lang = [
@@ -36,7 +38,7 @@ function Header() {
         {
             title: 'FER',
             link: '/',
-        }
+        },
     ];
 
     return (
@@ -56,10 +58,11 @@ function Header() {
                                 <div className="col-md-3">
                                     <ul className="option_nav">
                                         <li className="dropdown">
-                                            <Dropdown list={list_lang}/>
+                                            <Dropdown list={list_lang} />
                                         </li>
                                         <li className="dropdown">
-                                            <Dropdown list={list_price}/>                                        </li>
+                                            <Dropdown list={list_price} />{' '}
+                                        </li>
                                     </ul>
                                 </div>
                                 <div className="col-md-6">
@@ -112,82 +115,10 @@ function Header() {
                         <div className="header_bottom">
                             <ul className="option">
                                 <li id="search" className="search">
-                                    <form>
-                                        <input
-                                            className="search-submit"
-                                            type="submit"
-                                            value=""
-                                            style={{ background: `url(${images.searchBg}) center center no-repeat` }}
-                                        />
-                                        <input
-                                            className="search-input"
-                                            placeholder="Enter your search term..."
-                                            type="text"
-                                            value=""
-                                            name="search"
-                                        />
-                                    </form>
+                                    <Search />
                                 </li>
                                 <li className="option-cart">
-                                    <Button
-                                        href="/"
-                                        className="cart-icon"
-                                        style={{ background: `url(${images.carticon}) center center no-repeat` }}
-                                    >
-                                        cart <span className="cart_no">02</span>
-                                    </Button>
-                                    <ul className="option-cart-item">
-                                        <li>
-                                            <div className="cart-item">
-                                                <div className="image">
-                                                    <img src={images.products01Thum} alt="" />
-                                                </div>
-                                                <div className="item-description">
-                                                    <p className="name">Lincoln chair</p>
-                                                    <p>
-                                                        Size: <span className="light-red">One size</span>
-                                                        <br />
-                                                        Quantity: <span className="light-red">01</span>
-                                                    </p>
-                                                </div>
-                                                <div className="right">
-                                                    <p className="price">$30.00</p>
-                                                    <Button href="/" className="remove">
-                                                        <img src={images.remove} alt="remove" />
-                                                    </Button>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="cart-item">
-                                                <div className="image">
-                                                    <img src={images.products02Thum} alt="" />
-                                                </div>
-                                                <div className="item-description">
-                                                    <p className="name">Lincoln chair</p>
-                                                    <p>
-                                                        Size: <span className="light-red">One size</span>
-                                                        <br />
-                                                        Quantity: <span className="light-red">01</span>
-                                                    </p>
-                                                </div>
-                                                <div className="right">
-                                                    <p className="price">$30.00</p>
-                                                    <Button href="/" className="remove">
-                                                        <img src={images.remove} alt="remove" />
-                                                    </Button>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span className="total">
-                                                Total <strong>$60.00</strong>
-                                            </span>
-                                            <button className="checkout" onClick="location.href='checkout.html'">
-                                                CheckOut
-                                            </button>
-                                        </li>
-                                    </ul>
+                                    <Cart />
                                 </li>
                             </ul>
                             <div className="navbar-header">
@@ -206,81 +137,28 @@ function Header() {
                             <div className="navbar-collapse collapse">
                                 <ul className="nav navbar-nav">
                                     <li>
-                                        <DropdownMenu />
+                                        <DropdownMenu title="Home" />
                                     </li>
                                     <li>
-                                        <Button href="productgird.html">men</Button>
+                                        <DropdownMenu title="Men" />
                                     </li>
                                     <li>
-                                        <Button href="productlitst.html">women</Button>
-                                    </li>
-                                    {/* <li className="dropdown">
-                                        <Button href="/" className="dropdown-toggle" data-toggle="dropdown">
-                                            Fashion
-                                        </Button>
-                                        <div className="dropdown-menuu mega-menu">
-                                            <div className="row">
-                                                <div className="col-md-6 col-sm-6">
-                                                    <ul className="mega-menu-links">
-                                                        <li>
-                                                            <Button href="productgird.html">New Collection</Button>
-                                                        </li>
-                                                        <li>
-                                                            <Button href="productgird.html">Shirts & tops</Button>
-                                                        </li>
-                                                        <li>
-                                                            <Button href="productgird.html">Laptop & Brie</Button>
-                                                        </li>
-                                                        <li>
-                                                            <Button href="productgird.html">Dresses</Button>
-                                                        </li>
-                                                        <li>
-                                                            <Button href="productgird.html">Blazers & Jackets</Button>
-                                                        </li>
-                                                        <li>
-                                                            <Button href="productgird.html">Shoulder Bags</Button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="col-md-6 col-sm-6">
-                                                    <ul className="mega-menu-links">
-                                                        <li>
-                                                            <Button href="productgird.html">New Collection</Button>
-                                                        </li>
-                                                        <li>
-                                                            <Button href="productgird.html">Shirts & tops</Button>
-                                                        </li>
-                                                        <li>
-                                                            <Button href="productgird.html">Laptop & Brie</Button>
-                                                        </li>
-                                                        <li>
-                                                            <Button href="productgird.html">Dresses</Button>
-                                                        </li>
-                                                        <li>
-                                                            <Button href="productgird.html">Blazers & Jackets</Button>
-                                                        </li>
-                                                        <li>
-                                                            <Button href="productgird.html">Shoulder Bags</Button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li> */}
-                                    <li>
-                                        <Button href="productgird.html">gift</Button>
+                                        <DropdownMenu title="Women" />
                                     </li>
                                     <li>
-                                        <Button href="productgird.html">kids</Button>
+                                        <DropdownMenu title="Gift" />
                                     </li>
                                     <li>
-                                        <Button href="productgird.html">blog</Button>
+                                        <DropdownMenu title="Kids" />
                                     </li>
                                     <li>
-                                        <Button href="productgird.html">jewelry</Button>
+                                        <DropdownMenu title="Blog" />
                                     </li>
                                     <li>
-                                        <Button href="contact.html">contact us</Button>
+                                        <DropdownMenu title="Jewelry" />
+                                    </li>
+                                    <li>
+                                    <DropdownMenu title="contact us" />
                                     </li>
                                 </ul>
                             </div>

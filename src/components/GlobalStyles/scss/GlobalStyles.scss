@@ -402,7 +402,11 @@ button:hover {
     padding: 5px 12px 5px 0;
 }
 .option-item{
-    height: 12px;
+    height: 20px;
+}
+
+.header-search-cart-btn{
+    height: 34px;
 }
 .subnav {
     // display: none;
@@ -599,9 +603,10 @@ ul.dropdown-menuu > li > a:hover {
 }
 .search-submit {
     float: left;
-    width: 32px;
-    height: 32px;
+    // width: 32px;
+    // height: 32px;
     // background: url(../images/search-bg.png) center center no-repeat;
+    padding: 8px 10px;
     background-color: rgba(255, 255, 255, 0.1);
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -662,9 +667,6 @@ ul.dropdown-menuu > li > a:hover {
     color: #fff;
 }
 .option-cart-item {
-    position: absolute;
-    top: 35px;
-    right: 24px;
     width: 258px;
     border: 1px solid #f7544a;
     -webkit-border-radius: 10px;
@@ -672,7 +674,9 @@ ul.dropdown-menuu > li > a:hover {
     padding: 10px;
     background: #fff;
     z-index: 10000;
-    display: none;
+    height: 472px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .option-cart:hover .option-cart-item {
     display: block;
@@ -1038,7 +1042,7 @@ ul.dropdown-menuu > li > a:hover {
     margin: 45px 0 5px 0;
     padding: 0;
     height: 230px;
-    border: none;
+    border: none !important;
     text-align: center;
 }
 .productname {
@@ -1501,17 +1505,17 @@ form.newsletter input[type='submit']:hover {
     background: #f7544a;
     color: #fff;
 }
-.clolr-filter {
+.color-filter {
     position: relative;
 }
-.clolr-filter li {
+.color-filter li {
     display: inline-block;
     margin-right: 8px;
     margin-bottom: 8px;
     width: 26px;
     height: 26px;
 }
-.clolr-filter li a {
+.color-filter li a {
     float: left;
     display: block;
     -webkit-border-radius: 5px;

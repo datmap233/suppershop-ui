@@ -26,15 +26,6 @@ function ListBrand({ className }) {
                             <Item />
                         </ul>
                     </li>
-                    <li>
-                        <ul className="brand_item">
-                            <Item />
-                            <Item />
-                            <Item />
-                            <Item />
-                            <Item />
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </>

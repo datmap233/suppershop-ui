@@ -5,7 +5,7 @@ import 'tippy.js/dist/tippy.css';
 
 import "./DropdownMenu.scss"
 
-function DropdownMenu({ list }) {
+function DropdownMenu({ title }) {
     return (
         <HeadlessTippy
             interactive
@@ -51,7 +51,7 @@ function DropdownMenu({ list }) {
         >
             <div className='dropdown-btn-header'>
             <Button href="/" className="dropdown-toggle" data-toggle="dropdown">
-                Home
+                {title}
             </Button>
             </div>
         </HeadlessTippy>
