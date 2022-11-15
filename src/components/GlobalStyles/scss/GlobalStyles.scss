@@ -401,11 +401,11 @@ button:hover {
     text-transform: uppercase;
     padding: 5px 12px 5px 0;
 }
-.option-item{
+.option-item {
     height: 20px;
 }
 
-.header-search-cart-btn{
+.header-search-cart-btn {
     height: 34px;
 }
 .subnav {
@@ -956,25 +956,22 @@ ul.dropdown-menuu > li > a:hover {
     right: 0;
     top: 20px;
     background: #fff;
+    overflow: hidden;
 }
 .control .prev,
 .control .next {
     float: left;
     width: 14px;
-    height: 20px;
+    height: 32px;
     font-size: 0;
 }
 .control .next {
     margin-left: 15px;
-    // background: url(../images/arow_right.png) left top no-repeat;
-}
-.control .prev {
-    // background: url(../images/arow_left.png) left top no-repeat;
 }
 .control .prev:hover,
 .control .next:hover {
     background-position: left bottom;
-} /*~~ Products Style ~~*/ /*featured products */
+}
 .featured-products,
 .hot-products,
 .our-brand {
@@ -1566,22 +1563,26 @@ form.newsletter input[type='submit']:hover {
     float: left;
     width: 25%;
 }
-.view-mode a {
-    float: left;
+.view-mode button {
+    position: relative;
     width: 25px;
     height: 25px;
     border: 1px solid #cfcfcf;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    background-position: center top;
-    background-repeat: no-repeat;
     background-color: #fff;
-    font-size: 0;
     margin-right: 10px;
-    position: relative;
+    padding: 0 4px 0 0;
+    & > div {
+        position: absolute;
+        left: -0.6px;
+        top: 0;
+        height: 25px;
+        width: 25px;
+    }
 }
-.view-mode a.active,
-.view-mode a:hover {
+.view-mode button.active,
+.view-mode button:hover {
     background-position: center bottom;
     background-color: #ffcc00;
     border-color: #ffcc00;
@@ -1592,8 +1593,8 @@ form.newsletter input[type='submit']:hover {
 .view-mode .grid {
     // background-image: url(../images/grid-icon.png);
 }
-.view-mode a.active:after,
-.view-mode a.active:before {
+.view-mode button.active:after,
+.view-mode button.active:before {
     top: 100%;
     left: 50%;
     border: solid transparent;
@@ -1603,28 +1604,28 @@ form.newsletter input[type='submit']:hover {
     position: absolute;
     pointer-events: none;
 }
-.view-mode a.active:after {
+.view-mode button.active:after {
     border-color: rgba(247, 84, 74, 0);
     border-top-color: #ffcc00;
     border-width: 8px;
     margin-left: -8px;
 }
-.view-mode a.active:before {
+.view-mode button.active:before {
     border-color: rgba(247, 84, 74, 0);
     border-top-color: #f7544a;
     border-width: 8px;
     margin-left: -8px;
 }
-.bottom .view-mode a.active:after,
-.bottom .view-mode a.active:before {
+.bottom .view-mode button.active:after,
+.bottom .view-mode button.active:before {
     top: auto;
     bottom: 100%;
 }
-.bottom .view-mode a.active:after {
+.bottom .view-mode button.active:after {
     border-top-color: #fff;
     border-bottom-color: #ffcc00;
 }
-.bottom .view-mode a.active:before {
+.bottom .view-mode button.active:before {
     border-top-color: #fff;
     border-bottom-color: #ffcc00;
 }
@@ -1653,7 +1654,7 @@ option {
 .pager {
     float: right;
     width: auto;
-    margin: 0;
+    margin: 0 !important;
 }
 .pager a {
     float: left;
@@ -1708,12 +1709,13 @@ option {
     position: relative;
     width: 240px;
     margin: 15px auto 5px;
+    overflow: hidden;
 }
 .thum-image li {
     float: left;
     width: 57px;
     height: 57px;
-    padding: 5px;
+    padding: 5px 12px;
     display: inline-block;
 }
 .thum-image li a {
@@ -1734,20 +1736,21 @@ option {
     margin: 0 auto;
     display: block;
 }
-.thum-image .control-left,
-.thum-image .control-right {
+.preview_image .control-left,
+.preview_image .control-right {
     position: absolute;
-    top: 20px;
-    left: -20px;
-    font-size: 20px;
+    bottom: 28px;
+    left: 0;
+    font-size: 19px;
     color: #b0b0b0;
+    height: 60px;
 }
-.thum-image .control-right {
+.preview_image .control-right {
     left: auto;
-    right: -20px;
+    right: 0;
 }
-.thum-image .control-left:hover,
-.thum-image .control-right:hover,
+.preview_image .control-left:hover,
+.preview_image .control-right:hover,
 .preview-small .zoom:hover {
     color: #f7544a;
 }

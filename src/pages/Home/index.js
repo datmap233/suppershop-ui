@@ -1,4 +1,4 @@
-import Home from '~/layouts/components/Home/Home';
+import Home from "~/layouts/components/Home";
 
 function HomePage() {
     return <Home />;

@@ -1,0 +1,23 @@
+.slide-row-product {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+.control > button {
+    position: relative;
+    height: 32px;
+    border: none;
+    &:hover {
+        border: none;
+    }
+    & > div {
+        width: 24px;
+        height: 64px;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 12px);
+        padding: 4px;
+        & > img {
+            height: 100%;
+        }
+    }
+}

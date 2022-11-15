@@ -1,13 +1,13 @@
 function PriceFilter({position}) {
     return (
-        <div class={`price-filter ${position}`}>
-            <h3 class="title">Price</h3>
-            <form class="pricing">
+        <div className={`price-filter ${position}`}>
+            <h3 className="title">Price</h3>
+            <form className="pricing">
                 <label>
                     $
                     <input type="number" />
                 </label>
-                <span class="separate">-</span>
+                <span className="separate">-</span>
                 <label>
                     $
                     <input type="number" />

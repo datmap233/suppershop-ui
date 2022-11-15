@@ -1,7 +1,7 @@
 function EmptyBox({position}) {
     return (
-        <div class={`others ${position}`}>
-            <h3 class="title">Others</h3>
+        <div className={`others ${position}`}>
+            <h3 className="title">Others</h3>
         </div>
     );
 }

@@ -2,8 +2,8 @@ import Button from '~/components/Button';
 
 function ProductTag({position}) {
     return (
-        <div class={`product-tag ${position}`}>
-            <h3 class="title">
+        <div className={`product-tag ${position}`}>
+            <h3 className="title">
                 Products
                 <strong>Tags</strong>
             </h3>

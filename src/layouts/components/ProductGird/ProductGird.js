@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import images from '~/assets/images';
 import { ColorFilter, EmptyBox, FblBox, PriceFilter, ProductTag } from '~/components/Box';
 import Button from '~/components/Button';
@@ -5,6 +6,26 @@ import { ListBrand, ListItem } from '~/components/Popper';
 import LeftBarAdvertise from './LeftBarAdvertise';
 
 function ProductGird() {
+    const [oneRow, setOneRow] = useState(false);
+    const [classNameCol, setClassNameCol] = useState('col-md-4 col-sm-6');
+
+    const onClickGridProducts = (element) => {
+        setOneRow(true);
+        setClassNameCol('products-listItem');
+        const lists = document.querySelectorAll('.view-mode>.list');
+        for (let i = 0; i < lists.length; i++) lists[i].classList.add('active');
+        const grids = document.querySelectorAll('.view-mode>.grid');
+        for (let i = 0; i < grids.length; i++) grids[i].classList.remove('active');
+    };
+    const onClickListProducts = () => {
+        setOneRow(false);
+        setClassNameCol('col-md-4 col-sm-6');
+        const lists = document.querySelectorAll('.view-mode>.list');
+        for (let i = 0; i < lists.length; i++) lists[i].classList.remove('active');
+        const grids = document.querySelectorAll('.view-mode>.grid');
+        for (let i = 0; i < grids.length; i++) grids[i].classList.add('active');
+    };
+
     return (
         <>
             <div className="clearfix"></div>
@@ -55,11 +76,15 @@ function ProductGird() {
                                 <div className="toolbar">
                                     <div className="sorter">
                                         <div className="view-mode">
-                                            <Button href="productlitst.html" className="list">
-                                                <img src={images.listIcon} alt="" />
+                                            <Button className="list" onClick={onClickGridProducts}>
+                                                <div>
+                                                    <img src={images.listIcon} alt="" />
+                                                </div>
                                             </Button>
-                                            <Button href="/" className="grid active">
-                                                <img src={images.gridIcon} alt="" />
+                                            <Button className="grid active" onClick={onClickListProducts}>
+                                                <div>
+                                                    <img src={images.gridIcon} alt="" />
+                                                </div>
                                             </Button>
                                         </div>
                                         <div className="sort-by">
@@ -98,20 +123,20 @@ function ProductGird() {
                                     </div>
                                 </div>
                                 <div className="clearfix"></div>
-                                <div className="row">
-                                    <ListItem classNameCol="col-md-4 col-sm-6" disableTitle />
-                                    {/* products-listItem */}
-
-                                </div>
+                                <ListItem classNameCol={classNameCol} disableTitle oneRow={oneRow} />
                                 <div className="clearfix"></div>
                                 <div className="toolbar">
                                     <div className="sorter bottom">
                                         <div className="view-mode">
-                                            <Button href="productlitst.html" className="list">
-                                                <img src={images.listIcon} alt="" />
+                                            <Button className="list" onClick={onClickGridProducts}>
+                                                <div>
+                                                    <img src={images.listIcon} alt="" />
+                                                </div>
                                             </Button>
-                                            <Button href="/" className="grid active">
-                                                <img src={images.gridIcon} alt="" />
+                                            <Button className="grid active" onClick={onClickListProducts}>
+                                                <div>
+                                                    <img src={images.gridIcon} alt="" />
+                                                </div>
                                             </Button>
                                         </div>
                                         <div className="sort-by">

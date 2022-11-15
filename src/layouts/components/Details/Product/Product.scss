@@ -1,0 +1,14 @@
+.prev-thum {
+    display: flex;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.control-left,
+.control-right {
+    border: none;
+    background-color: white;
+    &:hover {
+        border: none;
+    }
+}

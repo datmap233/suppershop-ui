@@ -49,9 +49,12 @@ function Cart() {
                             <span className="total">
                                 Total <strong>$60.00</strong>
                             </span>
-                            <button className="checkout" onClick="location.href='checkout.html'">
+                            <Button
+                                className="checkout"
+                                // onClick="location.href='checkout.html'"
+                            >
                                 CheckOut
-                            </button>
+                            </Button>
                         </li>
                     </ul>
                 )}

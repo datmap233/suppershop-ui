@@ -1,4 +1,4 @@
-import ProductGird from '~/layouts/components/ProductGird/ProductGird';
+import ProductGird from "~/layouts/components/ProductGird";
 
 function ProductGirdPage() {
     return <ProductGird />;

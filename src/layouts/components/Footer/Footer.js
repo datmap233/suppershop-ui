@@ -1,7 +1,7 @@
 import images from "~/assets/images";
 import Button from "~/components/Button";
 
-function Header() {
+function Footer() {
     return (
         <div className="footer">
             <div className="footer-info">
@@ -40,4 +40,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Footer;

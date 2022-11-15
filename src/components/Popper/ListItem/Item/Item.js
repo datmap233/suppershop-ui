@@ -32,15 +32,15 @@ function Item({ sale, className, oneRow = false }) {
             {oneRow && (
                 <div className={className}>
                     <div className="products">
-                        <div class="offer">{sale}</div>
+                        {sale && <div className="offer">{sale}</div>}
                         <Button href="details.html">
                             <img src={images.products05Small} alt="Product Name" />
                         </Button>
-                        <div class="product-list-description">
-                            <div class="productname">Lincoln Corner Unit Products</div>
+                        <div className="product-list-description">
+                            <div className="productname">Lincoln Corner Unit Products</div>
                             <p>
                                 <img src="images/star.png" alt="" />
-                                <Button href="/" class="review_num">
+                                <Button href="/" className="review_num">
                                     02 Review(s)
                                 </Button>
                             </p>
@@ -50,24 +50,24 @@ function Item({ sale, className, oneRow = false }) {
                                 Proin lectus ipsum, gravida etds mattis vulputate, tristique ut lectus. Sed et lorem
                                 nunc...
                             </p>
-                            <div class="list_bottom">
-                                <div class="price">
-                                    <span class="new_price">
+                            <div className="list_bottom">
+                                <div className="price">
+                                    <span className="new_price">
                                         450.00
                                         <sup>$</sup>
                                     </span>
-                                    <span class="old_price">
+                                    <span className="old_price">
                                         450.00
                                         <sup>$</sup>
                                     </span>
                                 </div>
-                                <div class="button_group">
-                                    <button class="button">Add To Cart</button>
-                                    <button class="button compare">
-                                        <i class="fa fa-exchange"></i>
+                                <div className="button_group">
+                                    <button className="button">Add To Cart</button>
+                                    <button className="button compare">
+                                        <i className="fa fa-exchange"></i>
                                     </button>
-                                    <button class="button favorite">
-                                        <i class="fa fa-heart-o"></i>
+                                    <button className="button favorite">
+                                        <i className="fa fa-heart-o"></i>
                                     </button>
                                 </div>
                             </div>
