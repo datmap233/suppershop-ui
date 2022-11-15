@@ -2138,9 +2138,15 @@ option {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    max-height: 48px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    &.active{
+        max-height: 9999px;
+    }
 }
 .checkout-steps .step-title {
-    float: left;
+    text-align: left;
     width: 100%;
     padding: 15px 25px;
     font-size: 14px;
