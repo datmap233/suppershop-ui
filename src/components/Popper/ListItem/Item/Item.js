@@ -19,9 +19,6 @@ function Item({ sale, className, oneRow = false }) {
                             <button className="button add-cart" type="button">
                                 Add To Cart
                             </button>
-                            <button className="button compare" type="button">
-                                <i className="fa fa-exchange"></i>
-                            </button>
                             <button className="button wishlist" type="button">
                                 <i className="fa fa-heart-o"></i>
                             </button>
@@ -63,9 +60,6 @@ function Item({ sale, className, oneRow = false }) {
                                 </div>
                                 <div className="button_group">
                                     <button className="button">Add To Cart</button>
-                                    <button className="button compare">
-                                        <i className="fa fa-exchange"></i>
-                                    </button>
                                     <button className="button favorite">
                                         <i className="fa fa-heart-o"></i>
                                     </button>

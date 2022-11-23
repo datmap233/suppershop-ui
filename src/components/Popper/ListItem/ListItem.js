@@ -59,10 +59,15 @@ function ListItem({ className, classNameCol, disableTitle = false, oneRow = fals
                         <Item className={classNameCol} oneRow={oneRow} />
                         <Item className={classNameCol} oneRow={oneRow} />
                         <Item className={classNameCol} oneRow={oneRow} />
+
+                        <Item className={classNameCol} oneRow={oneRow} />
                         <Item className={classNameCol} oneRow={oneRow} />
                         <Item sale={'New'} className={classNameCol} oneRow={oneRow} />
+                        <Item sale={'New'} className={classNameCol} oneRow={oneRow} />
+
                         <Item className={classNameCol} oneRow={oneRow} />
                         <Item className={classNameCol} oneRow={oneRow} />
+                        <Item sale={'New'} className={classNameCol} oneRow={oneRow} />
                         <Item className={classNameCol} oneRow={oneRow} />
                     </div>
                 </div>

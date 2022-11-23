@@ -11,7 +11,7 @@ function Search() {
                 className="search-input"
                 placeholder="Enter your search term..."
                 type="text"
-                value=""
+                // value=" "
                 name="search"
             />
         </form>

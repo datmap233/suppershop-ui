@@ -111,6 +111,7 @@ body {
 ol,
 ul {
     list-style: none;
+    margin-bottom: 0 !important;
 }
 blockquote,
 q {
@@ -502,7 +503,7 @@ button:hover {
     font-size: 15px;
     color: #fff;
     text-transform: uppercase;
-    padding: 17px 20px;
+    padding: 10px 20px;
 }
 
 .nav li.active a,
@@ -667,15 +668,15 @@ ul.dropdown-menuu > li > a:hover {
     color: #fff;
 }
 .option-cart-item {
-    width: 258px;
+    width: 276px;
     border: 1px solid #f7544a;
     -webkit-border-radius: 10px;
     border-radius: 10px;
     padding: 10px;
     background: #fff;
     z-index: 10000;
-    height: 472px;
-    overflow-y: scroll;
+    max-height: 472px;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 .option-cart:hover .option-cart-item {
@@ -1209,6 +1210,7 @@ ul.dropdown-menuu > li > a:hover {
 .leftbar .title {
     font-size: 16px;
     text-transform: uppercase;
+    margin-top: 0;
 } /*!~~~~~~~~~~~~ SPECIAL DEAL ~~~~~~~~~~~~~*/
 .special-deal {
 }

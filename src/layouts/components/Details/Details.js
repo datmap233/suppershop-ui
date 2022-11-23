@@ -69,11 +69,11 @@ function Details() {
                             <div className="clearfix"></div>
                         </div>
                         <div className="col-md-3">
-                            <Special />
+                            <Special position="leftbar"/>
                             <div className="clearfix"></div>
                             <ProductTag position="leftbar" />
                             <div className="clearfix"></div>
-                            <Newsletter/>
+                            <Newsletter position="leftbar"/>
                             <div className="clearfix"></div>
                             <FblBox position="leftbar" />
                             <div className="clearfix"></div>
