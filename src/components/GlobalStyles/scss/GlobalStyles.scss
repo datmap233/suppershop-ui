@@ -1179,11 +1179,17 @@ ul.dropdown-menuu > li > a:hover {
 .brand-logo {
     float: left;
     border: 1px solid #dcdcdc;
-    -webkit-border-radius: 10px;
     border-radius: 10px;
     width: 100%;
     padding: 10px;
     text-align: center;
+    height: 87px;
+    display: flex;
+    justify-content: center;
+    &>img{
+        max-width: 100%;
+        max-height: 67px;
+    }
 }
 #braldLogo .brand_item li {
     display: inline-block;

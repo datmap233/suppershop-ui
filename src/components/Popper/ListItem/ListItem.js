@@ -4,7 +4,7 @@ import Button from '~/components/Button';
 import Item from './Item';
 import './ListItem.scss';
 
-function ListItem({ className, classNameCol, disableTitle = false, oneRow = false }) {
+function ListItem({ className, classNameCol, disableTitle = false, oneRow = false, data }) {
     const refSlideProducts = useRef();
     const [positionSlide, setPositionSlide] = useState(0);
     const [elementCount, setElementCount] = useState(0);
@@ -55,20 +55,10 @@ function ListItem({ className, classNameCol, disableTitle = false, oneRow = fals
                     {/* Trong details = 9
                     Trong home = 12 */}
                     <div className="row slide-row-product" ref={refSlideProducts} style={{ width: '300%' }}>
-                        <Item sale={'New'} className={classNameCol} oneRow={oneRow} />
-                        <Item className={classNameCol} oneRow={oneRow} />
-                        <Item className={classNameCol} oneRow={oneRow} />
-                        <Item className={classNameCol} oneRow={oneRow} />
-
-                        <Item className={classNameCol} oneRow={oneRow} />
-                        <Item className={classNameCol} oneRow={oneRow} />
-                        <Item sale={'New'} className={classNameCol} oneRow={oneRow} />
-                        <Item sale={'New'} className={classNameCol} oneRow={oneRow} />
-
-                        <Item className={classNameCol} oneRow={oneRow} />
-                        <Item className={classNameCol} oneRow={oneRow} />
-                        <Item sale={'New'} className={classNameCol} oneRow={oneRow} />
-                        <Item className={classNameCol} oneRow={oneRow} />
+                        {data &&
+                            Object.keys(data).map(function (key) {
+                                return  <Item sale={'New'} className={classNameCol} oneRow={oneRow} data={data[key]}/>
+                            })}
                     </div>
                 </div>
             )}

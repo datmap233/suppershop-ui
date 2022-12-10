@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import images from '~/assets/images';
 import { FblBox, ProductTag } from '~/components/Box';
 import Newsletter from '~/components/Box/Newsletter';
 import Special from '~/components/Box/Special';

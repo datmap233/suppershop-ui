@@ -1,13 +1,12 @@
-import images from '~/assets/images';
 import Button from '~/components/Button';
 
-function Item() {
+function Item({data}) {
     return (
         <>
             <li>
                 <Button href="/">
                     <div className="brand-logo">
-                        <img src={images.envato} alt="" />
+                        <img src={data.image} alt="" />
                     </div>
                 </Button>
             </li>

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import images from '~/assets/images';
 import { ColorFilter, EmptyBox, FblBox, PriceFilter, ProductTag } from '~/components/Box';
 import Button from '~/components/Button';

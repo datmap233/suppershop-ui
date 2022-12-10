@@ -1,6 +1,6 @@
 import Item from './Item';
 
-function ListBrand({ className }) {
+function ListBrand({ className, data }) {
     return (
         <>
             <div className="our-brand">
@@ -19,11 +19,10 @@ function ListBrand({ className }) {
                     <li>
                         {/* Chuyển thành map trong Item */}
                         <ul className="brand_item">
-                            <Item />
-                            <Item />
-                            <Item />
-                            <Item />
-                            <Item />
+                            {data &&
+                                Object.keys(data).map(function (key) {
+                                    return <Item data={data[key]} />;
+                                })}
                         </ul>
                     </li>
                 </ul>

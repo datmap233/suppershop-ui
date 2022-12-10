@@ -1,7 +1,12 @@
 import images from '~/assets/images';
 import Button from '~/components/Button';
 
-function Item({ sale, className, oneRow = false }) {
+function Item({ sale, className, oneRow = false , data}) {
+    function format(n) {
+        return n.toFixed(0).replace(/./g, function (c, i, a) {
+            return i > 0 && c !== '.' && (a.length - i) % 3 === 0 ? '.' + c : c;
+        });
+    }
     return (
         <>
             {!oneRow && (
@@ -10,11 +15,11 @@ function Item({ sale, className, oneRow = false }) {
                         {sale && <div className="offer">{sale}</div>}
                         <div className="thumbnail">
                             <Button href="details.html">
-                                <img src={images.products05Small} alt="Product Name" />
+                                <img style={{height:'100%'}} src={data.image} alt="Product Name" />
                             </Button>
                         </div>
-                        <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
-                        <h4 className="price">$451.00</h4>
+                        <div className="productname">{data.name}</div>
+                        <h4 className="price">{format(data.price)} $</h4>
                         <div className="button_group">
                             <button className="button add-cart" type="button">
                                 Add To Cart
