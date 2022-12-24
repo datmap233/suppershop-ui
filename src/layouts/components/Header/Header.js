@@ -2,7 +2,6 @@ import images from '~/assets/images';
 import Button from '~/components/Button';
 import Cart from './Cart';
 
-import Dropdown from './Dropdown';
 import DropdownMenu from './DropdownMenu';
 import Search from './Search';
 
@@ -55,16 +54,7 @@ function Header() {
                     <div className="col-md-10 col-sm-10">
                         <div className="header_top">
                             <div className="row">
-                                <div className="col-md-3">
-                                    <ul className="option_nav">
-                                        <li className="dropdown">
-                                            <Dropdown list={list_lang} />
-                                        </li>
-                                        <li className="dropdown">
-                                            <Dropdown list={list_price} />{' '}
-                                        </li>
-                                    </ul>
-                                </div>
+                                <div className="col-md-3"></div>
                                 <div className="col-md-6">
                                     <ul className="topmenu">
                                         <li>
@@ -91,7 +81,7 @@ function Header() {
                                     <ul className="usermenu">
                                         <li>
                                             <Button
-                                                href="checkout.html"
+                                                href="/login"
                                                 className="log"
                                                 style={{ background: `url(${images.loginbg}) left top no-repeat` }}
                                             >
@@ -100,7 +90,7 @@ function Header() {
                                         </li>
                                         <li>
                                             <Button
-                                                href="checkout2.html"
+                                                href="/register"
                                                 className="reg"
                                                 style={{ background: `url(${images.regbg}) left top no-repeat` }}
                                             >
@@ -158,7 +148,7 @@ function Header() {
                                         <DropdownMenu title="Jewelry" />
                                     </li>
                                     <li>
-                                    <DropdownMenu title="contact us" />
+                                        <DropdownMenu title="contact us" />
                                     </li>
                                 </ul>
                             </div>

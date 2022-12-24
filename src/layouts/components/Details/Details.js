@@ -6,6 +6,7 @@ import Button from '~/components/Button';
 import { ListBrand, ListItem } from '~/components/Popper';
 import Description from './Description';
 import Product from './Product';
+import Report from './Report';
 import Review from './Review';
 import Tags from './Tags';
 
@@ -14,24 +15,35 @@ function Details() {
     const refReview1 = useRef();
     const refReview2 = useRef();
     const refTag = useRef();
+    const refReport = useRef();
 
     const handleOnClickDecrip = () => {
         refDecrip.current.style.display = 'block';
         refReview1.current.style.display = 'none';
         refReview2.current.style.display = 'none';
         refTag.current.style.display = 'none';
+        refReport.current.style.display = 'none';
     };
     const handleOnClickReview = () => {
         refDecrip.current.style.display = 'none';
         refReview1.current.style.display = 'block';
         refReview2.current.style.display = 'block';
         refTag.current.style.display = 'none';
+        refReport.current.style.display = 'none';
     };
     const handleOnClickTag = () => {
         refDecrip.current.style.display = 'none';
         refReview1.current.style.display = 'none';
         refReview2.current.style.display = 'none';
         refTag.current.style.display = 'block';
+        refReport.current.style.display = 'none';
+    };
+    const handleOnClickReport = () => {
+        refDecrip.current.style.display = 'none';
+        refReview1.current.style.display = 'none';
+        refReview2.current.style.display = 'none';
+        refTag.current.style.display = 'none';
+        refReport.current.style.display = 'block';
     };
 
     return (
@@ -55,12 +67,16 @@ function Details() {
                                         <li>
                                             <Button onClick={handleOnClickTag}>PRODUCT TAGS</Button>
                                         </li>
+                                        <li>
+                                            <Button onClick={handleOnClickReport}>REPORT</Button>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div className="tab-content-wrap">
                                     <Description refDecrip={refDecrip} />
                                     <Review refReview1={refReview1} refReview2={refReview2} />
                                     <Tags refTag={refTag} />
+                                    <Report refReport={refReport} />
                                 </div>
                             </div>
                             <div className="clearfix"></div>
@@ -68,11 +84,11 @@ function Details() {
                             <div className="clearfix"></div>
                         </div>
                         <div className="col-md-3">
-                            <Special position="leftbar"/>
+                            <Special position="leftbar" />
                             <div className="clearfix"></div>
                             <ProductTag position="leftbar" />
                             <div className="clearfix"></div>
-                            <Newsletter position="leftbar"/>
+                            <Newsletter position="leftbar" />
                             <div className="clearfix"></div>
                             <FblBox position="leftbar" />
                             <div className="clearfix"></div>

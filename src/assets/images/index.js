@@ -54,11 +54,24 @@ const images = {
     products03Thum: require('~/assets/images/products/thum/products-03.png'),
     products04Thum: require('~/assets/images/products/thum/products-04.png'),
     products05Thum: require('~/assets/images/products/thum/products-05.png'),
+
+    bacham: require('~/assets/images/icons/3cham.svg').default,
+    close: require('~/assets/images/icons/close.svg').default,
+    dashboard: require('~/assets/images/icons/dashboard.svg').default,
+    down: require('~/assets/images/icons/down.svg').default,
+    home: require('~/assets/images/icons/home.svg').default,
+    image_login: require('~/assets/images/icons/image_login.svg').default,
+    like: require('~/assets/images/icons/like.svg').default,
+    love: require('~/assets/images/icons/love.svg').default,
+    mulperson: require('~/assets/images/icons/mulperson.svg').default,
+    notify: require('~/assets/images/icons/notify.svg').default,
+    personal: require('~/assets/images/icons/personal.svg').default,
+    plus: require('~/assets/images/icons/plus.svg').default,
+    right: require('~/assets/images/icons/right.svg').default,
+    rightArrow: require('~/assets/images/icons/rightArrow.svg').default,
+    setting: require('~/assets/images/icons/setting.svg').default,
+    smile: require('~/assets/images/icons/smile.svg').default,
+    up: require('~/assets/images/icons/up.svg').default,
+    warning: require('~/assets/images/icons/warning.png'),
 };
 export default images;
-
-
-
-
-
-

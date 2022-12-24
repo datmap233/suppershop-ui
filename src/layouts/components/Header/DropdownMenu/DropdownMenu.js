@@ -25,10 +25,10 @@ function DropdownMenu({ title }) {
                             <Button to="home3.html">home3</Button>
                         </li>
                         <li>
-                            <Button to="/productgird">Productlitst</Button>
+                            <Button to="/product-gird">Productlitst</Button>
                         </li>
                         <li>
-                            <Button to="/productgird">Productgird</Button>
+                            <Button to="/product-gird">Productgird</Button>
                         </li>
                         <li>
                             <Button to="details.html">Details</Button>

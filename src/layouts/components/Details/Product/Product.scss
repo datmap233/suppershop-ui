@@ -12,3 +12,25 @@
         border: none;
     }
 }
+
+.button.compare.img {
+    padding: 0;
+    height: 36px;
+    & > img {
+        height: 36px;
+        padding: 0 3px;
+    }
+}
+
+.button_group {
+    display: flex;
+}
+
+.input.summeryfild {
+    padding-left: 160px !important;
+}
+
+.input.textareafild {
+    padding-top: 30px !important;
+    width: 100%;
+}

@@ -1,0 +1,188 @@
+/* Login */
+.login {
+    width: 100%;
+    padding: 0 24px;
+    min-height: 606px;
+}
+
+/* Setting icon */
+.setting {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 104px;
+}
+.setting-btn {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+/* Input login */
+.login-main {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 32px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+.login-main > .input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.login > .input > input {
+    width: 100%;
+}
+
+.forgot-password {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.login-main > .title,
+.input-site > .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-main > .title > .logo,
+.input-site > .title > .logo {
+    width: 120px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+.login-main > .title > span,
+.input-site > .title > span {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 2px;
+    margin: 20px 0 16px;
+}
+.input {
+    margin: 24px 0;
+}
+
+.input-text {
+    letter-spacing: inherit;
+    color: currentcolor;
+    padding: 25px 12px 8px;
+    background-color: transparent;
+    width: 100%;
+    height: 56px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    border-radius: 16px;
+}
+
+.input-site {
+    position: relative;
+    width: 100%;
+    border: 1px solid rgba(109, 109, 109, 0.2);
+    border-radius: 16px;
+    transition: 0.2s;
+}
+.input-site:hover,
+.input-site:focus {
+    border: 1px solid rgb(109, 109, 109);
+}
+.label-input {
+    position: absolute;
+    top: 35%;
+    left: 17px;
+    font-size: 16px;
+    color: rgb(96, 125, 139);
+    user-select: none;
+    -webkit-user-select: none;
+    transition: 0.3s;
+}
+.input-text:focus ~ .label-input,
+.input-text.active ~ .label-input {
+    top: 8px;
+    left: 12px;
+    font-size: 12px;
+}
+.input-site + .input-site {
+    margin: 16px 0px 8px;
+}
+.btn {
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border: none;
+	font-size: 16px;
+	font-family: Nunito, sans-serif;
+	background-color: var(--white);
+	cursor: pointer;
+	text-decoration: none;
+	height: 56px;
+	font-weight: 600;
+	margin: 24px 0 16px;
+	transition: 0.2s;
+}
+
+.btn.blue {
+	background-color: var(--blue);
+	color: var(--white);
+}
+.btn.white {
+	background-color: var(--white);
+}
+.btn.gray {
+	background-color: #eceff1;
+}
+.btn.blue:hover {
+	background-color: rgb(28, 68, 178);
+}
+.btn.white:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+.btn.gray:hover {
+	background-color: rgb(178, 178, 178);
+}
+
+.btn-full-width {
+	width: 100%;
+}
+
+.btn-half-width {
+	width: 50%;
+}
+
+.link {
+	color: #2996ff;
+	font-size: 1.4rem;
+	text-underline-position: under;
+}
+.box {
+	border: none;
+	border-radius: 20px;
+	background-color: var(--white);
+	min-height: 95px;
+	width: 100%;
+}
+
+.bg-red{
+	background-color: var(--red);
+}
+.bg-yellow{
+	background-color: var(--yellow);
+}
+.bg-blue{
+	background-color: var(--blue);
+}
+.bg-gray{
+	background-color: var(--primary);
+}

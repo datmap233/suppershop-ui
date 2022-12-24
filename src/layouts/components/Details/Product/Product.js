@@ -21,7 +21,7 @@ function Product() {
             var child = document.querySelectorAll('.prev-thum>li').length;
             setElementCount(child);
         }
-        if (elementCount > -positionSlide / 57 +4) {
+        if (elementCount > -positionSlide / 57 + 4) {
             console.log(elementCount, -positionSlide / 57);
             refThumImage.current.style.marginLeft = `${positionSlide - 57}px`;
             setPositionSlide(positionSlide - 57);
@@ -138,14 +138,14 @@ function Product() {
                     </div>
                     <div className="button_group">
                         <button className="button">Add To Cart</button>
-                        <button className="button compare">
-                            <i className="fa fa-exchange"></i>
-                        </button>
                         <button className="button favorite">
                             <i className="fa fa-heart-o"></i>
                         </button>
                         <button className="button favorite">
                             <i className="fa fa-envelope-o"></i>
+                        </button>
+                        <button className="button compare img">
+                            <img src={images.warning} alt="" />
                         </button>
                     </div>
                 </div>
