@@ -32,11 +32,11 @@ function Register() {
                                 </div>
                                 <div className={cx('input-site')}>
                                     <input type="text" className={cx('input-text')} value="" onblur={checkInput} />
-                                    <label className={cx('title', 'label-input')}>Last Name *</label>
+                                    <label className={cx('title', 'label-input')}>Name *</label>
                                 </div>
                                 <div className={cx('input-site')}>
-                                    <input type="text" className={cx('input-text')} value="" onblur={checkInput} />
-                                    <label className={cx('title', 'label-input')}>First Name *</label>
+                                    <input type="email" className={cx('input-text')} value="" onblur={checkInput} />
+                                    <label className={cx('title', 'label-input')}>Email *</label>
                                 </div>
                                 <div className={cx('input-site', 'gender')}>
                                     <label for='gender'>Gender</label>
@@ -45,10 +45,6 @@ function Register() {
                                         <option value="Female">Female</option>
                                     </select>
                                     {/* <input type="text" className={cx('input-text')} value="" onblur={checkInput} /> */}
-                                </div>
-                                <div className={cx('input-site')}>
-                                    <input type="text" className={cx('input-text')} value="" onblur={checkInput} />
-                                    <label className={cx('title', 'label-input')}>Age *</label>
                                 </div>
                                 <div className={cx('input-site')}>
                                     <input type="password" className={cx('input-text')} value="" onblur={checkInput} />

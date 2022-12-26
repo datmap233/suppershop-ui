@@ -28,7 +28,7 @@ function Login() {
                             <div className={cx('input')}>
                                 <div className={cx('input-site')}>
                                     <input type="text" className={cx('input-text')} value="" onblur={checkInput} />
-                                    <label className={cx('title', 'label-input')}>Email Address *</label>
+                                    <label className={cx('title', 'label-input')}>Username *</label>
                                 </div>
                                 <div className={cx('input-site')}>
                                     <input type="password" className={cx('input-text')} value="" onblur={checkInput} />

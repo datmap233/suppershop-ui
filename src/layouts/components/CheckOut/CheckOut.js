@@ -31,13 +31,13 @@ function CheckOut() {
             <div className="container_fullwidth">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-3">
+                        {/* <div className="col-md-3">
                             <Special position={'leftbar'} />
                             <Tags position={'leftbar'} />
                             <Newsletter position={'leftbar'} />
                             <FblBox position={'leftbar'} />
-                        </div>
-                        <div className="col-md-9">
+                        </div> */}
+                        {/* <div className="col-md-9"> */}
                             <div className="checkout-page">
                                 <ol className="checkout-steps">
                                     <li className="steps active" ref={pushRefSteps}>
@@ -286,10 +286,9 @@ function CheckOut() {
                                     </li>
                                 </ol>
                             </div>
-                        </div>
+                        {/* </div> */}
                     </div>
                     <div className="clearfix"></div>
-                    <ListBrand className="our-brand" />
                 </div>
             </div>
             <div className="clearfix"></div>
