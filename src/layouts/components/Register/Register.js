@@ -26,6 +26,10 @@ function Register() {
                                 <span>Register</span>
                             </div>
                             <div className={cx('input')}>
+                            <div className={cx('input-site')}>
+                                    <input type="text" className={cx('input-text')} value="" onblur={checkInput} />
+                                    <label className={cx('title', 'label-input')}>Username *</label>
+                                </div>
                                 <div className={cx('input-site')}>
                                     <input type="text" className={cx('input-text')} value="" onblur={checkInput} />
                                     <label className={cx('title', 'label-input')}>Last Name *</label>
@@ -34,9 +38,25 @@ function Register() {
                                     <input type="text" className={cx('input-text')} value="" onblur={checkInput} />
                                     <label className={cx('title', 'label-input')}>First Name *</label>
                                 </div>
+                                <div className={cx('input-site', 'gender')}>
+                                    <label for='gender'>Gender</label>
+                                    <select name="gender" id='gender'>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                    {/* <input type="text" className={cx('input-text')} value="" onblur={checkInput} /> */}
+                                </div>
                                 <div className={cx('input-site')}>
                                     <input type="text" className={cx('input-text')} value="" onblur={checkInput} />
-                                    <label className={cx('title', 'label-input')}>Email Address *</label>
+                                    <label className={cx('title', 'label-input')}>Age *</label>
+                                </div>
+                                <div className={cx('input-site')}>
+                                    <input type="password" className={cx('input-text')} value="" onblur={checkInput} />
+                                    <label className={cx('title', 'label-input')}>Password *</label>
+                                </div>
+                                <div className={cx('input-site')}>
+                                    <input type="password" className={cx('input-text')} value="" onblur={checkInput} />
+                                    <label className={cx('title', 'label-input')}>Confirm Password *</label>
                                 </div>
                             </div>
                             <button className={cx('btn', 'btn-full-width', 'blue')}>Register</button>

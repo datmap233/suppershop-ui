@@ -116,73 +116,85 @@
     margin: 16px 0px 8px;
 }
 .btn {
-	border-radius: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	border: none;
-	font-size: 16px;
-	font-family: Nunito, sans-serif;
-	background-color: var(--white);
-	cursor: pointer;
-	text-decoration: none;
-	height: 56px;
-	font-weight: 600;
-	margin: 24px 0 16px;
-	transition: 0.2s;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-family: Nunito, sans-serif;
+    background-color: var(--white);
+    cursor: pointer;
+    text-decoration: none;
+    height: 56px;
+    font-weight: 600;
+    margin: 24px 0 16px;
+    transition: 0.2s;
 }
 
 .btn.blue {
-	background-color: var(--blue);
-	color: var(--white);
+    background-color: var(--blue);
+    color: var(--white);
 }
 .btn.white {
-	background-color: var(--white);
+    background-color: var(--white);
 }
 .btn.gray {
-	background-color: #eceff1;
+    background-color: #eceff1;
 }
 .btn.blue:hover {
-	background-color: rgb(28, 68, 178);
+    background-color: rgb(28, 68, 178);
 }
 .btn.white:hover {
-	background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 .btn.gray:hover {
-	background-color: rgb(178, 178, 178);
+    background-color: rgb(178, 178, 178);
 }
 
 .btn-full-width {
-	width: 100%;
+    width: 100%;
 }
 
 .btn-half-width {
-	width: 50%;
+    width: 50%;
 }
 
 .link {
-	color: #2996ff;
-	font-size: 1.4rem;
-	text-underline-position: under;
+    color: #2996ff;
+    font-size: 1.4rem;
+    text-underline-position: under;
 }
 .box {
-	border: none;
-	border-radius: 20px;
-	background-color: var(--white);
-	min-height: 95px;
-	width: 100%;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--white);
+    min-height: 95px;
+    width: 100%;
 }
 
-.bg-red{
-	background-color: var(--red);
+.bg-red {
+    background-color: var(--red);
 }
-.bg-yellow{
-	background-color: var(--yellow);
+.bg-yellow {
+    background-color: var(--yellow);
 }
-.bg-blue{
-	background-color: var(--blue);
+.bg-blue {
+    background-color: var(--blue);
 }
-.bg-gray{
-	background-color: var(--primary);
+.bg-gray {
+    background-color: var(--primary);
+}
+.input-site.gender {
+    border: none;
+    & > label {
+        font-size: 16px;
+    }
+    & select{
+        outline: none;
+        &>{
+            font-size: 16px;
+        }
+    }
 }
