@@ -51,7 +51,11 @@ function HomeSlider() {
                                 </h2>
                             </div>
                             <div className="flat-button caption5 formLeft delay600">
-                                <a className="more" href="/">
+                            <a
+                                    className="more"
+                                    href="/"
+                                    style={{ background: `url(${images.moreIcon}) right 10px top 7px no-repeat` }}
+                                >
                                     More Details
                                 </a>
                             </div>
@@ -70,7 +74,11 @@ function HomeSlider() {
                                 </p>
                             </div>
                             <div className="flat-button caption4 formLeft delay600 text-center">
-                                <a className="more" href="/">
+                            <a
+                                    className="more"
+                                    href="/"
+                                    style={{ background: `url(${images.moreIcon}) right 10px top 7px no-repeat` }}
+                                >
                                     More Details
                                 </a>
                             </div>

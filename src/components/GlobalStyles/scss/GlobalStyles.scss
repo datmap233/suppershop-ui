@@ -125,8 +125,11 @@ q:after {
     content: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+    border-collapse: separate;
+    border-spacing: 0 16px;
+    & td {
+        vertical-align: middle !important;
+    }
 } /* Changable Global Styles -------------------------------------------------- */
 *::-moz-selection {
     color: #ff9e98;
@@ -1155,19 +1158,9 @@ ul.dropdown-menuu > li > a:hover {
 .product-list-description .new_price sup {
     font-size: 18px;
 }
-.product-list-description .old_price {
-    float: left;
-    text-decoration: line-through;
-    font-size: 18px;
-    color: #666666;
-}
-.product-list-description .old_price sup {
-    font-size: 10px;
-}
 .product-list-description .button {
     margin: 0 5px;
 }
-.favorite,
 .compare {
     color: #ff3636;
 } /*!````` product style close``````````````!*/ /* BRAND LOGO */
@@ -1186,7 +1179,7 @@ ul.dropdown-menuu > li > a:hover {
     height: 87px;
     display: flex;
     justify-content: center;
-    &>img{
+    & > img {
         max-width: 100%;
         max-height: 67px;
     }
@@ -1793,15 +1786,6 @@ option {
 .products-description .new_price sup {
     font-size: 18px;
 }
-.products-description .old_price {
-    color: #666666;
-    font-size: 18px;
-    text-decoration: line-through;
-    margin-left: 30px;
-}
-.products-description .old_price sup {
-    font-size: 13px;
-}
 .wided {
     float: left;
     position: relative;
@@ -2149,7 +2133,7 @@ option {
     max-height: 48px;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
-    &.active{
+    &.active {
         max-height: 9999px;
     }
 }
@@ -2664,8 +2648,7 @@ option {
         width: 100%;
         text-align: center;
     }
-    .product-list-description .new_price,
-    .product-list-description .old_price {
+    .product-list-description .new_price {
         float: none;
     }
     .product-list-description .button {
@@ -2820,10 +2803,7 @@ option {
         font-size: 24px;
         margin-left: 10px;
     }
-    .products-description .old_price {
-        font-size: 16px;
-        margin-left: 10px;
-    }
+
     .products-description .button {
         margin: 5px 0;
     }
@@ -2918,10 +2898,10 @@ option {
     }
 }
 :root {
-	--text-color: #455a7b;
-	--white: #fff;
-	--black: #000;
-	--blue: #2962ff;
-	--yellow: #ffc400;
-	--red: #ff3d00;
+    --text-color: #455a7b;
+    --white: #fff;
+    --black: #000;
+    --blue: #2962ff;
+    --yellow: #ffc400;
+    --red: #ff3d00;
 }

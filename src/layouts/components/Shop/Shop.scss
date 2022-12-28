@@ -1,0 +1,15 @@
+.form-row .input[type='password'] {
+    padding-left: 100px;
+}
+.title-shop {
+    padding-top: 40px;
+    background-color: white;
+    & .title {
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    & .about {
+        font-size: 20px;
+    }
+}

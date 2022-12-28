@@ -11,8 +11,8 @@ import ProductGirdPage from '~/pages/ProductGird';
 import ProductsManagePage from '~/pages/ProductsManage';
 import RegisterPage from '~/pages/Register';
 import SalesManagerPage from '~/pages/SalesManager';
+import ShopPage from '~/pages/Shop';
 import TrackOrderStatusPage from '~/pages/TrackOrderStatus';
-import UsersPage from '~/pages/Users';
 
 const publicRoutes = [
     { path: config.routes.home, components: HomePage },
@@ -22,11 +22,11 @@ const publicRoutes = [
     { path: config.routes.register, components: RegisterPage },
     { path: config.routes.login, components: LoginPage },
     { path: config.routes.forgotPassword, components: ForgotPassswordPage },
-    { path: config.routes.users, components: UsersPage },
     { path: config.routes.productsManage, components: ProductsManagePage },
     { path: config.routes.salesManager, components: SalesManagerPage },
     { path: config.routes.trackOrderStatus, components: TrackOrderStatusPage },
     { path: config.routes.manageOrder, components: ManageOrderPage },
+    { path: config.routes.shop, components: ShopPage },
 ];
 const privateRoutes = [];
 

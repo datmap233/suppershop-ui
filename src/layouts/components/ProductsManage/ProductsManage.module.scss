@@ -5,103 +5,90 @@
     margin: auto;
     transition: 0.3s;
 }
-.user-title {
+.title {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 32px;
 }
-.user-title > .title {
+.title > .title-sub {
     font-size: 27px;
     list-style: 27px;
     font-weight: 700;
 }
-.user-title > .add {
+.title > .add {
     width: 40px;
     height: 40px;
     padding: 9px;
-}
-.user-list {
-    width: 100%;
-}
-.user-list-table {
-    width: 100%;
-}
-.user-list-item.user,
-.user-list-item.user {
-    width: 55%;
-}
-.user-list-item.gender,
-.user-list-item.role,
-.user-list-item.status,
-.user-list-item.action {
-    width: 10%;
-}
-.user-list-item {
-    width: 5%;
 }
 
 table {
     border-spacing: 0px 16px;
 }
-.user-list-title > tr > .user-list-item,
-.user-list-content > tr > .user-list-item {
-    align-items: center;
+
+.list-title {
+    & span {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    & > tr {
+        & > .table-list-content {
+            text-align: center;
+        }
+    }
+}
+.table-list-item {
+    & img {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+    & span {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    & .content {
+        & > span:first-child {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+        }
+    }
+}
+.table-list-content,
+.table-list-item {
+    min-width: 150px;
     text-align: center;
-    font-size: 16px;
 }
-.user-list-title > tr > .user-list-item {
-    font-weight: 700;
+.table-list-item {
+    & > .table-item {
+        padding: 12px 0;
+        & > .content {
+            display: flex;
+        }
+    }
 }
-.user-list-content > tr > .user-list-item.user > .info-user {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 16px;
-    height: 94px;
-}
-
-.user-list-content > tr > .user-list-item.user > .info-user > .content > .name {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 30px;
-}
-.user-list-content > tr > .user-list-item.user > .info-user > .content > .email {
-    font-size: 15px;
-    font-weight: 400;
-}
-.user-list-content > tr > .user-list-item.user > .info-user > .avatar {
-    width: 40px;
-    height: 40px;
-    padding: 4px;
-    margin-right: 12px;
-}
-
-.user-list-content > tr > .user-list-item.user > .info-user > .avatar:hover {
-    background-color: var(--primary);
-    border-radius: 20px;
-}
-.user-list-content > tr > .user-list-item.action > div {
-    padding-top: 12px;
-}
-.user-list-content > tr > .user-list-item.action > div > .action {
-    margin: 0 auto;
-    padding: 16px 0;
-}
-.user-list-content > tr > .user-list-item.action > div > .action > img {
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-}
-.user-list-item.checkbox {
+.table-list-item:first-child {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-.user-list-item.action {
+.table-list-item:last-child {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+.btn-option {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & > button {
+        margin: 0;
+        padding: 0;
+    }
+}
+
 .grid_full_width {
     width: 100%;
     margin: 0 auto;
@@ -156,7 +143,6 @@ table {
     text-decoration: none;
     height: 56px;
     font-weight: 600;
-    margin: 24px 0 16px;
     transition: 0.2s;
 }
 
@@ -217,7 +203,7 @@ table {
     background-color: var(--primary);
 }
 .list-3-cham {
-    width: 120px;
+    min-width: 120px;
     background-color: white;
     padding: 8px;
     border-radius: 16px;
@@ -226,7 +212,8 @@ table {
         font-size: 16px;
         line-height: 20px;
         padding: 10px;
-        &:hover{
+        text-align: center;
+        &:hover {
             color: var(--blue);
             cursor: pointer;
         }

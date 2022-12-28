@@ -1,35 +1,7 @@
-import { ListBrand, ListItem } from '~/components/Popper';
+import { ListItem } from '~/components/Popper';
 import HomeSlider from './HomeSlider';
 
-
-function Home() {
-    const brand = [
-        {
-            id: 1,
-            name: 'Adidas',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/2560px-Adidas_Logo.svg.png',
-        },
-        {
-            id: 2,
-            name: 'Audi',
-            image: 'https://1000logos.net/wp-content/uploads/2017/05/PUMA-logo.jpg',
-        },
-        {
-            id: 3,
-            name: 'Mec',
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb3qavgG-w-JBGaX40KE-y5D_PzVLEfoyfzxyBNtaqpX6zb7fq-61fAvBJatJpFoUlIA&usqp=CAU',
-        },
-        {
-            id: 4,
-            name: 'Audi',
-            image: 'https://d2hucwwplm5rxi.cloudfront.net/wp-content/uploads/2022/03/03133433/Audi-logo-history-and-meaning-L-03-03-1024x640.jpg',
-        },
-        {
-            id: 5,
-            name: 'Mec',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/800px-Mercedes-Logo.svg.png',
-        },
-    ];
+function ListIProduct() {
     const products = [
         {
             id: 1,
@@ -390,8 +362,6 @@ function Home() {
                     <ListItem className="hot-products" classNameCol="col-md-3 col-sm-6" data={products}/>
                     <div className="clearfix"></div>
                     <ListItem className="featured-products" classNameCol="col-md-3 col-sm-6" data={products}/>
-                    <div className="clearfix"></div>
-                    <ListBrand data={brand}/>
                 </div>
             </div>
             <div className="clearfix"></div>
@@ -399,4 +369,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default ListIProduct;

@@ -6,11 +6,11 @@ const routes = {
     register: '/register',
     login: '/login',
     forgotPassword: '/forgot-password',
-    users: '/users',
     productsManage: '/products-manage',
     manageOrder: '/manage-order',
     salesManager: '/sales-manager',
     trackOrderStatus: '/track-order-status',
+    shop: '/shop',
 };
 
 export default routes;

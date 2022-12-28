@@ -11,155 +11,151 @@ function TrackOrderStatus() {
     return (
         <>
             <div className={cx('container', 'home')}>
-                <div className={cx('user-title')}>
-                    <div className={cx('title')}>Track Order Status</div>
+                <div className={cx('title')}>
+                    <div className={cx('title-sub')}>Track Order Status</div>
                     <button className={cx('add', 'btn', 'blue')}>
                         <img src={images.plus} alt="Add Icon" />
                     </button>
                 </div>
-                <div className={cx('user-list')}>
-                    <table className={cx('user-list-table')}>
-                        <thead className={cx('user-list-title')}>
+                <div className={cx('grid__column-full')}>
+                    <table className={cx('grid__column-full')}>
+                        <thead className={cx('list-title')}>
                             <tr>
-                                <td className={cx('user-list-item')}>
+                                <td className={cx('table-list-content')}>
                                     <input type="checkbox" />
                                 </td>
-                                <td className={cx('user-list-item', 'user')}>
-                                    <span>User</span>
+                                <td className={cx('table-list-content')}>
+                                    <span>Thông tin đơn hàng</span>
                                 </td>
-                                <td className={cx('user-list-item', 'gender')}>
-                                    <span>Gender</span>
+                                <td className={cx('table-list-content')}>
+                                    <span>Trạng thái</span>
                                 </td>
-                                <td className={cx('user-list-item', 'role')}>
-                                    <span>Role</span>
+                                <td className={cx('table-list-content')}>
+                                    <span>Tổng tiền</span>
                                 </td>
-                                <td className={cx('user-list-item', 'status')}>
-                                    <span>Status</span>
-                                </td>
-                                <td className={cx('user-list-item', 'action')}>
-                                    <span>Actions</span>
+                                <td className={cx('table-list-content')}>
+                                    <span>Lựa chọn</span>
                                 </td>
                             </tr>
                         </thead>
-                        <tbody className={cx('user-list-content')}>
+                        <tbody>
                             <tr className={cx('box')}>
-                                <td className={cx('user-list-item', 'checkbox')}>
+                                <td className={cx('table-list-item')}>
                                     <input className={cx('check')} type="checkbox" />
                                 </td>
-                                <td className={cx('user-list-item', 'user')}>
-                                    <div className={cx('info-user')}>
+                                <td className={cx('table-list-item')}>
+                                    <div className={cx('table-item')}>
                                         <div className={cx('content')}>
-                                            <div className={cx('name')}>Arriaga Rhys</div>
-                                            <div className={cx('email')}>rhys@arriaga.com</div>
+                                            <span>
+                                                Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu -
+                                                HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết
+                                                Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng
+                                                Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans
+                                                Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO
+                                                CẤP LOẠI 1
+                                            </span>
+                                            <span>x1</span>
+                                        </div>
+                                        <div className={cx('content')}>
+                                            <span>
+                                                Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu -
+                                                HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết
+                                                Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng
+                                                Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans
+                                                Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO
+                                                CẤP LOẠI 1
+                                            </span>
+                                            <span>x1</span>
+                                        </div>
+                                        <div className={cx('content')}>
+                                            <span>
+                                                Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu -
+                                                HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết
+                                                Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng
+                                                Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans
+                                                Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO
+                                                CẤP LOẠI 1
+                                            </span>
+                                            <span>x1</span>
+                                        </div>
+                                        <div className={cx('content')}>
+                                            <span>
+                                                Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu -
+                                                HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết
+                                                Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng
+                                                Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans
+                                                Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO
+                                                CẤP LOẠI 1
+                                            </span>
+                                            <span>x1</span>
+                                        </div>
+                                        <div className={cx('content')}>
+                                            <span>
+                                                Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu -
+                                                HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết
+                                                Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng
+                                                Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans
+                                                Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO
+                                                CẤP LOẠI 1
+                                            </span>
+                                            <span>x1</span>
+                                        </div>
+                                        <div className={cx('content')}>
+                                            <span>
+                                                Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu -
+                                                HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết
+                                                Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng
+                                                Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans
+                                                Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO
+                                                CẤP LOẠI 1
+                                            </span>
+                                            <span>x1</span>
+                                        </div>
+                                        <div className={cx('content')}>
+                                            <span>
+                                                Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu -
+                                                HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết
+                                                Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng
+                                                Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans
+                                                Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO
+                                                CẤP LOẠI 1
+                                            </span>
+                                            <span>x1</span>
+                                        </div>
+                                        <div className={cx('content')}>
+                                            <span>
+                                                Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu -
+                                                HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng Dáng Suông, cam kết
+                                                Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans Baggy Nam Ống Rộng
+                                                Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO CẤP LOẠI 1 Quần Jeans
+                                                Baggy Nam Ống Rộng Dáng Suông, cam kết Giặt không phai màu - HÀNG CAO
+                                                CẤP LOẠI 1
+                                            </span>
+                                            <span>x1</span>
                                         </div>
                                     </div>
                                 </td>
-                                <td className={cx('user-list-item', 'gender')}>
-                                    <span>M</span>
+                                <td className={cx('table-list-item')}>
+                                    <span>Đang giao hàng</span>
                                 </td>
-                                <td className={cx('user-list-item', 'role')}>
-                                    <span>Admin</span>
+                                <td className={cx('table-list-item')}>
+                                    <span>200.000</span>
                                 </td>
-                                <td className={cx('user-list-item', 'status')}>
-                                    <span>Active</span>
-                                </td>
-                                <td className={cx('user-list-item', 'action')}>
+                                <td className={cx('table-list-item')}>
                                     <HeadlessTippy
                                         interactive
                                         appendTo={() => document.body}
                                         delay={[0, 500]}
-                                        placement="bottom-end"
+                                        placement="bottom-start"
                                         render={(attrs) => (
-                                            <ul className={cx("list-3-cham")} tabIndex="-1" {...attrs}>
+                                            <ul className={cx('list-3-cham')} tabIndex="-1" {...attrs}>
                                                 <li>Sửa</li>
                                                 <li>Xóa</li>
                                             </ul>
                                         )}
                                     >
-                                        <div>
-                                            <button className={cx('action', 'btn', 'white')}>
-                                                <img src={images.bacham} alt="3 chấm" />
-                                            </button>
-                                        </div>
-                                    </HeadlessTippy>
-                                </td>
-                            </tr><tr className={cx('box')}>
-                                <td className={cx('user-list-item', 'checkbox')}>
-                                    <input className={cx('check')} type="checkbox" />
-                                </td>
-                                <td className={cx('user-list-item', 'user')}>
-                                    <div className={cx('info-user')}>
-                                        <div className={cx('content')}>
-                                            <div className={cx('name')}>Arriaga Rhys</div>
-                                            <div className={cx('email')}>rhys@arriaga.com</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className={cx('user-list-item', 'gender')}>
-                                    <span>M</span>
-                                </td>
-                                <td className={cx('user-list-item', 'role')}>
-                                    <span>Admin</span>
-                                </td>
-                                <td className={cx('user-list-item', 'status')}>
-                                    <span>Active</span>
-                                </td>
-                                <td className={cx('user-list-item', 'action')}>
-                                    <HeadlessTippy
-                                        interactive
-                                        appendTo={() => document.body}
-                                        delay={[0, 500]}
-                                        placement="bottom-end"
-                                        render={(attrs) => (
-                                            <ul className={cx("list-3-cham")} tabIndex="-1" {...attrs}>
-                                                <li>Sửa</li>
-                                                <li>Xóa</li>
-                                            </ul>
-                                        )}
-                                    >
-                                        <div>
-                                            <button className={cx('action', 'btn', 'white')}>
-                                                <img src={images.bacham} alt="3 chấm" />
-                                            </button>
-                                        </div>
-                                    </HeadlessTippy>
-                                </td>
-                            </tr><tr className={cx('box')}>
-                                <td className={cx('user-list-item', 'checkbox')}>
-                                    <input className={cx('check')} type="checkbox" />
-                                </td>
-                                <td className={cx('user-list-item', 'user')}>
-                                    <div className={cx('info-user')}>
-                                        <div className={cx('content')}>
-                                            <div className={cx('name')}>Arriaga Rhys</div>
-                                            <div className={cx('email')}>rhys@arriaga.com</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className={cx('user-list-item', 'gender')}>
-                                    <span>M</span>
-                                </td>
-                                <td className={cx('user-list-item', 'role')}>
-                                    <span>Admin</span>
-                                </td>
-                                <td className={cx('user-list-item', 'status')}>
-                                    <span>Active</span>
-                                </td>
-                                <td className={cx('user-list-item', 'action')}>
-                                    <HeadlessTippy
-                                        interactive
-                                        appendTo={() => document.body}
-                                        delay={[0, 500]}
-                                        placement="bottom-end"
-                                        render={(attrs) => (
-                                            <ul className={cx("list-3-cham")} tabIndex="-1" {...attrs}>
-                                                <li>Sửa</li>
-                                                <li>Xóa</li>
-                                            </ul>
-                                        )}
-                                    >
-                                        <div>
-                                            <button className={cx('action', 'btn', 'white')}>
+                                        <div className={cx('btn-option')}>
+                                            <button className={cx('btn', 'white')}>
                                                 <img src={images.bacham} alt="3 chấm" />
                                             </button>
                                         </div>
