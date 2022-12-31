@@ -328,6 +328,14 @@ button:hover {
     border: 1px solid #ffcc00;
     color: #fe5252;
 }
+.remove {
+    border: none;
+    height: 34px;
+    padding: 10px 20px;
+    &:hover {
+        border: none;
+    }
+}
 .add-cart {
     padding: 9px 30px;
 }
@@ -495,6 +503,17 @@ button:hover {
     position: relative;
     width: auto;
     padding: 20px 0 10px 0;
+}
+.navbar-collapsee {
+    float: left;
+    position: relative;
+    width: auto;
+    padding: 20px 0 10px 0;
+    width: 90%;
+    display: flex !important;
+    justify-content: center;
+    height: auto !important;
+    overflow: visible !important;
 }
 .nav li {
     float: left;
@@ -1054,6 +1073,11 @@ ul.dropdown-menuu > li > a:hover {
     color: #2f2f2f;
     margin-bottom: 10px;
     color: #333333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    padding: 0 8px;
 }
 .products .price {
     float: left;

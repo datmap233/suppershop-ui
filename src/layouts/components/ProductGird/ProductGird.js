@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import images from '~/assets/images';
 import { EmptyBox, PriceFilter } from '~/components/Box';
 import Button from '~/components/Button';
@@ -6,6 +7,25 @@ import { ListItem } from '~/components/Popper';
 import LeftBarAdvertise from './LeftBarAdvertise';
 
 function ProductGird() {
+    const { id } = useParams();
+
+    const [data, setData] = useState();
+    useEffect(() => {
+        fetch('http://localhost:5000/api/v1/product/getList', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            },
+        })
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                setData(data.products);
+            });
+    }, []);
+
     const [oneRow, setOneRow] = useState(false);
     const [classNameCol, setClassNameCol] = useState('col-md-4 col-sm-6');
 
@@ -25,6 +45,49 @@ function ProductGird() {
         const grids = document.querySelectorAll('.view-mode>.grid');
         for (let i = 0; i < grids.length; i++) grids[i].classList.add('active');
     };
+    const categories = [
+        { name: 'Food', href: '/product-gird/bf8a16dd-48d8-49ef-ab42-e5a497fb16df' },
+        { name: 'Fashion', href: '/product-gird/5db61ac9-d50e-4ed8-92a7-d71f7a7b6f11' },
+        { name: 'Electronic device', href: '/product-gird/0122bebe-d24b-4e54-9bd5-9fb285fbeda9' },
+        { name: 'House Ware', href: '/product-gird/1ed3e7c9-1df2-4363-a881-875f20f4e196' },
+    ];
+
+    const [dataSort, setDataSort] = useState();
+
+    useEffect(() => {
+        setDataSort(data);
+    }, [data]);
+
+    const [changeData, setChangeData] = useState(0);
+
+    const handleOnChangeSort = (e) => {
+        if (e.target.value === 'Default') {
+            setDataSort(data);
+            setChangeData(changeData + 1);
+        }
+        var sort = data;
+        if (e.target.value === 'Price: Decrease') {
+            sort = sort.sort(function (a, b) {
+                return a.price < b.price ? 1 : -1;
+            });
+            setDataSort(sort);
+            setChangeData(changeData + 1);
+        } else if (e.target.value === 'Price: Ascending') {
+            sort = sort.sort(function (a, b) {
+                return a.price > b.price ? 1 : -1;
+            });
+            setDataSort(sort);
+            setChangeData(changeData + 1);
+        } else if (e.target.value === 'Name: Ascending') {
+            sort = data.sort((a, b) => a.name.charCodeAt(0) - b.name.charCodeAt(0));
+            setDataSort(sort);
+            setChangeData(changeData + 1);
+        } else if (e.target.value === 'Name: Decrease') {
+            sort = data.sort((a, b) => -(a.name.charCodeAt(0) - b.name.charCodeAt(0)));
+            setDataSort(sort);
+            setChangeData(changeData + 1);
+        }
+    };
 
     return (
         <>
@@ -33,9 +96,7 @@ function ProductGird() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3">
-                            <LeftBarAdvertise title="Categories" className="category leftbar" />
-                            <div className="clearfix"></div>
-                            <LeftBarAdvertise title="Branch" className="branch leftbar" />
+                            <LeftBarAdvertise title="Categories" className="category leftbar" list={categories} />
                             <div className="clearfix"></div>
                             <PriceFilter position="leftbar" />
                             <div className="clearfix"></div>
@@ -83,31 +144,27 @@ function ProductGird() {
                                         </div>
                                         <div className="sort-by">
                                             Sort by :
-                                            <select name="">
+                                            <select name="" onChange={handleOnChangeSort}>
                                                 <option value="Default" selected>
                                                     Default
                                                 </option>
-                                                <option value="Name">Name</option>
-                                                <option value="Price">Price</option>
+                                                <option value="Name: Ascending">Name: Ascending</option>
+                                                <option value="Name: Decrease">Name: Decrease</option>
+                                                <option value="Price: Ascending">Price: Ascending</option>
+                                                <option value="Price: Decrease">Price: Decrease</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div className="pager">
-                                        <Button href="/" className="prev-page">
-                                            <i className="fa fa-angle-left"></i>
-                                        </Button>
-                                        <Button href="/" className="active">
-                                            1
-                                        </Button>
-                                        <Button href="/">2</Button>
-                                        <Button href="/">3</Button>
-                                        <Button href="/" className="next-page">
-                                            <i className="fa fa-angle-right"></i>
-                                        </Button>
-                                    </div>
                                 </div>
                                 <div className="clearfix"></div>
-                                <ListItem classNameCol={classNameCol} disableTitle oneRow={oneRow} />
+                                <ListItem
+                                    classNameCol={classNameCol}
+                                    disableTitle
+                                    oneRow={oneRow}
+                                    data={dataSort}
+                                    id={id}
+                                    changeData={changeData}
+                                />
                                 <div className="clearfix"></div>
                                 <div className="toolbar">
                                     <div className="sorter bottom">
@@ -123,41 +180,6 @@ function ProductGird() {
                                                 </div>
                                             </Button>
                                         </div>
-                                        <div className="sort-by">
-                                            Sort by :
-                                            <select name="">
-                                                <option value="Default" selected>
-                                                    Default
-                                                </option>
-                                                <option value="Name">Name</option>
-                                                <option value="">
-                                                    <strong>#</strong>Price
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <div className="limiter">
-                                            Show :
-                                            <select name="">
-                                                <option value="3" selected>
-                                                    3
-                                                </option>
-                                                <option value="6">6</option>
-                                                <option value="9">9</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="pager">
-                                        <Button href="/" className="prev-page">
-                                            <i className="fa fa-angle-left"></i>
-                                        </Button>
-                                        <Button href="/" className="active">
-                                            1
-                                        </Button>
-                                        <Button href="/">2</Button>
-                                        <Button href="/">3</Button>
-                                        <Button href="/" className="next-page">
-                                            <i className="fa fa-angle-right"></i>
-                                        </Button>
                                     </div>
                                 </div>
                                 <div className="clearfix"></div>

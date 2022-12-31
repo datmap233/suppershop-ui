@@ -36,7 +36,6 @@ const images = {
     sliderImage01: require('~/assets/images/slider-image-01.png'),
     sliderImage02: require('~/assets/images/slider-image-02.png'),
     sliderImage03: require('~/assets/images/slider-image-03.png'),
-    star: require('~/assets/images/star.png'),
     themeforest: require('~/assets/images/themeforest.png'),
     twi: require('~/assets/images/twi.png'),
     upArow: require('~/assets/images/up-arow.png'),
@@ -73,5 +72,8 @@ const images = {
     smile: require('~/assets/images/icons/smile.svg').default,
     up: require('~/assets/images/icons/up.svg').default,
     warning: require('~/assets/images/icons/warning.png'),
+
+    star: require('~/assets/images/icon-star.svg').default,
+    starWhite: require('~/assets/images/white-star.svg').default,
 };
 export default images;

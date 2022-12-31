@@ -6,40 +6,6 @@ import DropdownMenu from './DropdownMenu';
 import Search from './Search';
 
 function Header() {
-    const list_lang = [
-        {
-            title: 'Eng',
-            link: '/',
-        },
-        {
-            title: 'Vns',
-            link: '/',
-        },
-        {
-            title: 'Fer',
-            link: '/',
-        },
-        {
-            title: 'Gem',
-            link: '/',
-        },
-    ];
-
-    const list_price = [
-        {
-            title: 'USD',
-            link: '/',
-        },
-        {
-            title: 'UKD',
-            link: '/',
-        },
-        {
-            title: 'FER',
-            link: '/',
-        },
-    ];
-
     return (
         <div className="header">
             <div className="container">
@@ -111,44 +77,22 @@ function Header() {
                                     <Cart />
                                 </li>
                             </ul>
-                            <div className="navbar-header">
-                                <button
-                                    type="button"
-                                    className="navbar-toggle"
-                                    data-toggle="collapse"
-                                    data-target=".navbar-collapse"
-                                >
-                                    <span className="sr-only">Toggle navigation</span>
-                                    <span className="icon-bar"></span>
-                                    <span className="icon-bar"></span>
-                                    <span className="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div className="navbar-collapse collapse">
+                            <div className="navbar-collapsee collapse" style={{ display: 'flex' }}>
                                 <ul className="nav navbar-nav">
                                     <li>
                                         <DropdownMenu title="Home" />
                                     </li>
                                     <li>
-                                        <DropdownMenu title="Men" />
+                                        <DropdownMenu title="Food" href="/product-gird/bf8a16dd-48d8-49ef-ab42-e5a497fb16df" />
                                     </li>
                                     <li>
-                                        <DropdownMenu title="Women" />
+                                        <DropdownMenu title="Fashion" href="/product-gird/5db61ac9-d50e-4ed8-92a7-d71f7a7b6f11" />
                                     </li>
                                     <li>
-                                        <DropdownMenu title="Gift" />
+                                        <DropdownMenu title="Electronic device" href="/product-gird/0122bebe-d24b-4e54-9bd5-9fb285fbeda9" />
                                     </li>
                                     <li>
-                                        <DropdownMenu title="Kids" />
-                                    </li>
-                                    <li>
-                                        <DropdownMenu title="Blog" />
-                                    </li>
-                                    <li>
-                                        <DropdownMenu title="Jewelry" />
-                                    </li>
-                                    <li>
-                                        <DropdownMenu title="contact us" />
+                                        <DropdownMenu title="House Ware" href="/product-gird/1ed3e7c9-1df2-4363-a881-875f20f4e196" />
                                     </li>
                                 </ul>
                             </div>

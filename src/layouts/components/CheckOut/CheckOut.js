@@ -175,12 +175,13 @@ function CheckOut() {
                                                                 />
                                                             </div>
                                                         </div>
+                                                        <h5>Method Payment</h5>
                                                         <p>
                                                             <span className="input-radio">
                                                                 <input type="radio" name="user" />
                                                             </span>
                                                             <span className="text">
-                                                                I wish to subscribe to the Herbal Store newsletter.
+                                                            Payment on delivery.
                                                             </span>
                                                         </p>
                                                         <p>
@@ -188,7 +189,7 @@ function CheckOut() {
                                                                 <input type="radio" name="user" />
                                                             </span>
                                                             <span className="text">
-                                                                My delivery and billing addresses are the same.
+                                                            Online payment.
                                                             </span>
                                                         </p>
                                                     </div>
@@ -255,22 +256,6 @@ function CheckOut() {
                                             </div>
                                         </form>
                                     </div>
-                                </li>
-                                <li className="steps" ref={pushRefSteps}>
-                                    <Button className="step-title" onClick={() => handleOnClickSteps(2)}>
-                                        03. Shipping information
-                                    </Button>
-                                </li>
-                                <li className="steps" ref={pushRefSteps}>
-                                    <Button className="step-title" onClick={() => handleOnClickSteps(3)}>
-                                        04. shipping method
-                                    </Button>
-                                </li>
-                                <li className="steps" ref={pushRefSteps} onClick={() => handleOnClickSteps(4)}>
-                                    <Button className="step-title">05. payment information</Button>
-                                </li>
-                                <li className="steps" ref={pushRefSteps} onClick={() => handleOnClickSteps(5)}>
-                                    <Button className="step-title">06. oder review</Button>
                                 </li>
                             </ol>
                         </div>

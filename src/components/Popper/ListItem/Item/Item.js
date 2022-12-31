@@ -1,7 +1,7 @@
 import images from '~/assets/images';
 import Button from '~/components/Button';
 
-function Item({ sale, className, oneRow = false, data }) {
+function Item({ sale, className, oneRow = false, data, key, checkCategory = true, href = '/' }) {
     function format(n) {
         return n.toFixed(0).replace(/./g, function (c, i, a) {
             return i > 0 && c !== '.' && (a.length - i) % 3 === 0 ? '.' + c : c;
@@ -9,12 +9,12 @@ function Item({ sale, className, oneRow = false, data }) {
     }
     return (
         <>
-            {!oneRow && (
-                <div className={className}>
+            {!oneRow && checkCategory && (
+                <div className={className} key={key}>
                     <div className="products">
                         {sale && <div className="offer">{sale}</div>}
                         <div className="thumbnail">
-                            <Button href="details.html">
+                            <Button href={href}>
                                 <img
                                     style={{ height: '100%' }}
                                     src={data !== undefined && data.image}
@@ -22,8 +22,13 @@ function Item({ sale, className, oneRow = false, data }) {
                                 />
                             </Button>
                         </div>
-                        <div className="productname">{data !== undefined && data.name}</div>
-                        <h4 className="price">{data !== undefined && format(data.price)} $</h4>
+                        <div className="productname">
+                            <span title={data !== undefined && data.name}>{data !== undefined && data.name}</span>
+                        </div>
+                        <h4 className="price">
+                            {data !== undefined && format(data.price)}
+                            <sup>đ</sup>
+                        </h4>
                         <div className="button_group">
                             <button className="button add-cart" type="button">
                                 Add To Cart
@@ -35,32 +40,29 @@ function Item({ sale, className, oneRow = false, data }) {
                     </div>
                 </div>
             )}
-            {oneRow && (
-                <div className={className}>
+            {oneRow && checkCategory && (
+                <div className={className} key={key}>
                     <div className="products">
                         {sale && <div className="offer">{sale}</div>}
-                        <Button href="details.html">
-                            <img src={images.products05Small} alt="Product Name" />
-                        </Button>
+                        <div className="thumbnail">
+                            <Button href={href}>
+                                <img
+                                    style={{ height: '100%' }}
+                                    src={data !== undefined && data.image}
+                                    alt="Product Name"
+                                />
+                            </Button>
+                        </div>
                         <div className="product-list-description">
-                            <div className="productname">Lincoln Corner Unit Products</div>
-                            <p>
-                                <img src="images/star.png" alt="" />
-                                <Button href="/" className="review_num">
-                                    02 Review(s)
-                                </Button>
-                            </p>
-                            <p>
-                                Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc.
-                                Vestibulum ante ipsum primis in faucibus orci luctus et ultri ces posuere cubilia curae.
-                                Proin lectus ipsum, gravida etds mattis vulputate, tristique ut lectus. Sed et lorem
-                                nunc...
-                            </p>
-                            <div className="list_bottom">
+                            <div className="productname">
+                                <span title={data !== undefined && data.name}>{data !== undefined && data.name}</span>
+                            </div>
+                            <p>{data !== undefined && data.description}</p>
+                            <div className="list_bottom fix_price_addToCart">
                                 <div className="price">
                                     <span className="new_price">
-                                        450.00
-                                        <sup>$</sup>
+                                        {data !== undefined && format(data.price)}
+                                        <sup>đ</sup>
                                     </span>
                                 </div>
                                 <div className="button_group">

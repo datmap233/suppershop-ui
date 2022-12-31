@@ -4,7 +4,7 @@ import Button from '~/components/Button';
 import Item from './Item';
 import './ListItem.scss';
 
-function ListItem({ className, classNameCol, disableTitle = false, oneRow = false, data }) {
+function ListItem({ className, classNameCol, disableTitle = false, oneRow = false, data, id = '' }) {
     const refSlideProducts = useRef();
     const [positionSlide, setPositionSlide] = useState(0);
     const [elementCount, setElementCount] = useState(0);
@@ -15,6 +15,7 @@ function ListItem({ className, classNameCol, disableTitle = false, oneRow = fals
             setPositionSlide(positionSlide + 100);
         }
     };
+
     const handleOnClickBtnRight = () => {
         if (elementCount === 0) {
             var parent = document.querySelectorAll('.row.slide-row-product').length;
@@ -51,27 +52,40 @@ function ListItem({ className, classNameCol, disableTitle = false, oneRow = fals
                             </div>
                         </Button>
                     </div>
-                    {/* sau chỉnh lại width */}
-                    {/* Trong details = 9
-                    Trong home = 12 */}
-                    <div className="row slide-row-product" ref={refSlideProducts} style={{ width: '300%' }}>
-                        {data &&
+                    <div className="row slide-row-product" ref={refSlideProducts} style={{ width: '200%' }}>
+                        {data !== undefined &&
                             Object.keys(data).map(function (key) {
-                                return  <Item sale={'New'} className={classNameCol} oneRow={oneRow} data={data[key]}/>
+                                if (key < 8)
+                                    return (
+                                        <Item
+                                            sale={'New'}
+                                            className={classNameCol}
+                                            oneRow={oneRow}
+                                            key={key}
+                                            data={data[key]}
+                                            href={`/details/${data[key].product_id}`}
+                                        />
+                                    );
+                                else return;
                             })}
                     </div>
                 </div>
             )}
             {disableTitle && (
                 <div className="row">
-                    <Item sale={'New'} className={classNameCol} oneRow={oneRow} />
-                    <Item className={classNameCol} oneRow={oneRow} />
-                    <Item className={classNameCol} oneRow={oneRow} />
-                    <Item className={classNameCol} oneRow={oneRow} />
-                    <Item className={classNameCol} oneRow={oneRow} />
-                    <Item className={classNameCol} oneRow={oneRow} />
-                    <Item className={classNameCol} oneRow={oneRow} />
-                    <Item className={classNameCol} oneRow={oneRow} />
+                    {data !== undefined &&
+                        Object.keys(data).map(function (key) {
+                            return (
+                                <Item
+                                    key={key}
+                                    className={classNameCol}
+                                    oneRow={oneRow}
+                                    data={data[key]}
+                                    checkCategory={id !== '' && data[key].category_id === id}
+                                    href={`/details/${data[key].product_id}`}
+                                />
+                            );
+                        })}
                 </div>
             )}
         </>
