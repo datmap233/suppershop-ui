@@ -30,7 +30,6 @@ function Cart() {
     return (
         <>
             <HeadlessTippy
-            visible
                 interactive
                 appendTo={() => document.body}
                 delay={[0, 500]}
