@@ -1,4 +1,5 @@
 import config from '~/config/';
+import AddProductPage from '~/pages/AddProduct';
 import CheckOutPage from '~/pages/CheckOut';
 import DetailsPage from '~/pages/Details';
 import ForgotPassswordPage from '~/pages/ForgotPasssword';
@@ -7,6 +8,7 @@ import ForgotPassswordPage from '~/pages/ForgotPasssword';
 import HomePage from '~/pages/Home';
 import LoginPage from '~/pages/Login';
 import ManageOrderPage from '~/pages/ManageOrder';
+import MessagePage from '~/pages/Message';
 import ProductGirdPage from '~/pages/ProductGird';
 import ProductsManagePage from '~/pages/ProductsManage';
 import RegisterPage from '~/pages/Register';
@@ -27,6 +29,8 @@ const publicRoutes = [
     { path: config.routes.trackOrderStatus, components: TrackOrderStatusPage },
     { path: config.routes.manageOrder, components: ManageOrderPage },
     { path: config.routes.shop, components: ShopPage },
+    { path: config.routes.message, components: MessagePage },
+    { path: config.routes.addProduct, components: AddProductPage },
 ];
 const privateRoutes = [];
 

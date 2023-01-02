@@ -23,10 +23,10 @@ function Product({ data }) {
             if (arr.length === 0)
                 arr = [
                     {
-                        ma: data.product_id,
+                        productId: data.product_id,
                         image: data.image,
                         name: data.name,
-                        price: data.price,
+                        unitPrice: data.price,
                         quantity: quantity,
                     },
                 ];
@@ -53,10 +53,7 @@ function Product({ data }) {
                 </div>
                 <div className="products-description">
                     <h5 className="name">{data !== undefined && data.name}</h5>
-                    <p>
-                        {data !== undefined && <Star style={{ display: 'inline-block' }} amount={data.rating} />}
-                        <span className="review_num">02 Review(s)</span>
-                    </p>
+                    <p>{data !== undefined && <Star style={{ display: 'inline-block' }} amount={data.rating} />}</p>
                     <p>
                         Availability:
                         {data !== undefined && (
@@ -97,17 +94,41 @@ function Product({ data }) {
             <div className="col-md-3">
                 <div className="special-deal leftbar">
                     <h4 className="title">REVIEW</h4>
-                    <div className="special-item">
-                        <div className="product-image">
-                            <Button href="/">
-                                <img src={images.products01Thum} alt="" />
-                            </Button>
+                    <div class="review-box_feedback">
+                        <div class="feedback-element">
+                            <p class="name-customer">Yukiin</p>
+                            <p class="content-customer">Sản phẩm đẹp hơn mong đợi</p>
                         </div>
-                        <div className="product-info">
-                            <p>Licoln Corner Unit</p>
-                            <h5 className="price">$300.00</h5>
+                        <div class="feedback-element">
+                            <p class="name-customer">Yukiin</p>
+                            <p class="content-customer">Sản phẩm đẹp hơn mong đợi</p>
+                        </div>
+                        <div class="feedback-element">
+                            <p class="name-customer">Yukiin</p>
+                            <p class="content-customer">Sản phẩm đẹp hơn mong đợi</p>
+                        </div>
+                        <div class="feedback-element">
+                            <p class="name-customer">Yukiin</p>
+                            <p class="content-customer">Sản phẩm đẹp hơn mong đợi</p>
+                        </div>
+                        <div class="feedback-element">
+                            <p class="name-customer">Yukiin</p>
+                            <p class="content-customer">Sản phẩm đẹp hơn mong đợi</p>
+                        </div>
+                        <div class="feedback-element">
+                            <p class="name-customer">Yukiin</p>
+                            <p class="content-customer">Sản phẩm đẹp hơn mong đợi</p>
+                        </div>
+                        <div class="feedback-element">
+                            <p class="name-customer">Yukiin</p>
+                            <p class="content-customer">Sản phẩm đẹp hơn mong đợi</p>
+                        </div>
+                        <div class="feedback-element">
+                            <p class="name-customer">Yukiin</p>
+                            <p class="content-customer">Sản phẩm đẹp hơn mong đợi</p>
                         </div>
                     </div>
+                    <button class="view-more">View More</button>
                 </div>
             </div>
         </div>

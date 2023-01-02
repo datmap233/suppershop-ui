@@ -166,23 +166,6 @@ function ProductGird() {
                                     changeData={changeData}
                                 />
                                 <div className="clearfix"></div>
-                                <div className="toolbar">
-                                    <div className="sorter bottom">
-                                        <div className="view-mode">
-                                            <Button className="list" onClick={onClickGridProducts}>
-                                                <div>
-                                                    <img src={images.listIcon} alt="" />
-                                                </div>
-                                            </Button>
-                                            <Button className="grid active" onClick={onClickListProducts}>
-                                                <div>
-                                                    <img src={images.gridIcon} alt="" />
-                                                </div>
-                                            </Button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="clearfix"></div>
                             </div>
                         </div>
                     </div>

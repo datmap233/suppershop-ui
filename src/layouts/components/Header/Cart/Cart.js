@@ -22,7 +22,7 @@ function Cart() {
         if (data !== undefined && sumPrice === 0)
             for (let index = 0; index < data.length; index++) {
                 const value = data[index];
-                sum += value.price * value.quantity;
+                sum += value.unitPrice * value.quantity;
             }
         setSumPrice(sum + sumPrice);
         // eslint-disable-next-line react-hooks/exhaustive-deps

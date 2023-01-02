@@ -2154,7 +2154,6 @@ option {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    max-height: 48px;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
     &.active {
@@ -2929,3 +2928,257 @@ option {
     --yellow: #ffc400;
     --red: #ff3d00;
 }
+.link-to-shop {
+    width: 100px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: underline;
+    padding: 8px 12px;
+    background-color: var();
+}
+/* css review box */
+.review-box_feedback {
+    width: 100%;
+    max-height: 158px;
+    overflow-y: auto;
+}
+
+.review-box_header {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.feedback-element {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed gray;
+    padding-bottom: 10px;
+}
+
+.view-more {
+    margin: 15px 0;
+    border: none;
+    background: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* end css review box */
+
+/* css cart add product */
+
+.cart-popup{
+	padding: 15px;
+	border: 1px solid black;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	margin: 15px;
+	width: 250px;
+}
+
+.infor-cart{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.infor-cart img{
+	width: 80px;
+}
+
+.price-total_cart{
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 10px 0;
+	margin-bottom: 15px;
+}
+
+.action-btn button{
+	width: 100%;
+	padding: 5px 0;
+	background: yellow;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.quanity-cart{
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+/* end css cart add product */
+
+/* css message page */
+.content-page{
+	padding: 15px;
+}
+
+.content-page h2{
+	margin-bottom: 15px;
+}
+
+.wrap-message-page{
+	display: flex;
+	justify-content: space-between;
+}
+
+.col-left-message-page{
+	flex: 25%;
+	border: 1px solid black;
+	margin-right: 20px;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+.col-left-message-page ul{
+	list-style: none;
+}
+
+.element-chat{
+	margin-bottom: 15px;
+	border-bottom: 1px dashed black;
+	padding-bottom: 10px;
+}
+
+.element-chat:hover{
+	color: red;
+	cursor: pointer;
+}
+
+.active-mess{
+	color: red;
+}
+
+.last-mess{
+	text-align: right;
+}
+
+.name-shop{
+	margin-bottom: 5px;
+	font-size: 22px;
+	font-weight: bolder;
+}
+
+.col-right-message-page{
+	flex: 75%;
+}
+
+.box-chat{
+	width: 100%;
+	border: 1px solid black;
+	height: 100%;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+.box-chat h3{
+	margin-bottom: 10px;
+}
+
+.chat-content{
+	height: 75%;
+	padding:  20px 0;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-bottom: 5px;
+}
+
+.mess-me{
+	display: flex;
+	justify-content: right;
+}
+
+.mess-me p{
+	background: blue;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+
+.mess-you{
+	display: flex;
+}
+
+.mess-you p{
+	background: #dddddd;
+	color: black;
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+
+.input-chat{
+	width: 100%;
+}
+
+.input-chat input{
+	width: 100%;
+	border: none;
+	padding: 13px;
+}
+/* end css message page */
+
+/* css shop manager */
+.wrap{
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
+
+.sm-margin-right{
+	margin-right: 20px;
+}
+
+
+.breadcrumb{
+	margin-bottom: 15px;
+}
+
+.add-product h3{
+	margin-bottom: 15px;
+}
+
+.input-name-product{
+	width: 100%;
+}
+
+.input-name-product input{
+	width: 100%;
+	padding: 5px 15px;
+	margin-bottom: 15px;
+}
+
+.des{
+	font-weight: bolder;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.type-product, .price, .sh3{
+	margin-bottom: 15px;
+
+}
+
+.type-product label, .price label, .status label{
+	padding-right: 20px;
+}
+
+.type-product select, .status select{
+	width: 150px;
+	text-align: center;
+}
+
+
+.categorise, .feature-image, .gallery-image{
+	border: 1px solid black;
+	border-radius: 15px;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
+.feature-image h3, .gallery-image h3{
+	margin-bottom: 10px;
+}
+/* end css shop manager */
+
+/* css manager order, history buying, sale manage, product manage */

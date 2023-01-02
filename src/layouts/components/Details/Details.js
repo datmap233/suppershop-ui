@@ -24,6 +24,12 @@ function Details() {
                     <div className="row">
                         <Product data={data} />
                         <div className="clearfix"></div>
+                        {data !== undefined && (
+                            <a href={`/shop/${data.shop_id}`} className="link-to-shop">
+                                Go to shop
+                            </a>
+                        )}
+                        <div className="clearfix"></div>
                         <div className="tab-box">
                             <div id="tabnav">
                                 <ul>

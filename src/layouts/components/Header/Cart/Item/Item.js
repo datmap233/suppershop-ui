@@ -27,7 +27,7 @@ function Item({ data }) {
             </div>
             <div className="right">
                 <p className="price">
-                    {format(data.price)}
+                    {format(data.unitPrice*data.quantity)}
                     <sup>đ</sup>
                 </p>
                 <Button className="remove" onClick={handleOnClick}>

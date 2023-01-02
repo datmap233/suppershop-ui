@@ -29,14 +29,6 @@ function Item({ sale, className, oneRow = false, data, key, checkCategory = true
                             {data !== undefined && format(data.price)}
                             <sup>đ</sup>
                         </h4>
-                        <div className="button_group">
-                            <button className="button add-cart" type="button">
-                                Add To Cart
-                            </button>
-                            <button className="button wishlist" type="button">
-                                <i className="fa fa-heart-o"></i>
-                            </button>
-                        </div>
                     </div>
                 </div>
             )}
@@ -64,9 +56,6 @@ function Item({ sale, className, oneRow = false, data, key, checkCategory = true
                                         {data !== undefined && format(data.price)}
                                         <sup>đ</sup>
                                     </span>
-                                </div>
-                                <div className="button_group">
-                                    <button className="button">Add To Cart</button>
                                 </div>
                             </div>
                         </div>

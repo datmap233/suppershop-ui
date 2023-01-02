@@ -10,7 +10,9 @@ const routes = {
     manageOrder: '/manage-order',
     salesManager: '/sales-manager',
     trackOrderStatus: '/track-order-status',
-    shop: '/shop',
+    shop: '/shop/:id',
+    message: '/message',
+    addProduct: '/add-product/:id',
 };
 
 export default routes;

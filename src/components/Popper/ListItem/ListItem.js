@@ -81,7 +81,7 @@ function ListItem({ className, classNameCol, disableTitle = false, oneRow = fals
                                     className={classNameCol}
                                     oneRow={oneRow}
                                     data={data[key]}
-                                    checkCategory={id !== '' && data[key].category_id === id}
+                                    checkCategory={id === '' ? true : data[key].category_id === id}
                                     href={`/details/${data[key].product_id}`}
                                 />
                             );
