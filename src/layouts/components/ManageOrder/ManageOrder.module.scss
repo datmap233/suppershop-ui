@@ -27,6 +27,10 @@ table {
     border-spacing: 0px 16px;
     & tr {
         border: 1px solid #ccc;
+        & td {
+            padding: 0px 8px;
+            border: 1px solid #ccc;
+        }
     }
 }
 
@@ -70,6 +74,10 @@ table {
         padding: 12px 0;
         & > .content {
             display: flex;
+            justify-content: space-between;
+            & span {
+                text-align: left;
+            }
         }
     }
 }

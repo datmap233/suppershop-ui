@@ -40,7 +40,7 @@ function Cart() {
                             Object.keys(data).map(function (key) {
                                 return (
                                     <li>
-                                        <Item data={data[key]} />
+                                        <Item key={key} data={data[key]} />
                                     </li>
                                 );
                             })}

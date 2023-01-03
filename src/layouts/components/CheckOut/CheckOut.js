@@ -19,11 +19,6 @@ function CheckOut() {
         }
         setSumPrice(sum);
     }, []);
-    console.log({
-        userId: 'bb9e74f3-e0e9-40a8-a633-6e026fccaf1b',
-        address: '135 Tran Hung Dao',
-        products: data,
-    });
     return (
         <>
             <div className="clearfix"></div>

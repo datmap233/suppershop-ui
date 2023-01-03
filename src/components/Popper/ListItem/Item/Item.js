@@ -1,7 +1,7 @@
 import images from '~/assets/images';
 import Button from '~/components/Button';
 
-function Item({ sale, className, oneRow = false, data, key, checkCategory = true, href = '/' }) {
+function Item({ sale, className, oneRow = false, data, checkCategory = true, href = '/' }) {
     function format(n) {
         return n.toFixed(0).replace(/./g, function (c, i, a) {
             return i > 0 && c !== '.' && (a.length - i) % 3 === 0 ? '.' + c : c;
@@ -10,7 +10,7 @@ function Item({ sale, className, oneRow = false, data, key, checkCategory = true
     return (
         <>
             {!oneRow && checkCategory && (
-                <div className={className} key={key}>
+                <div className={className}>
                     <div className="products">
                         {sale && <div className="offer">{sale}</div>}
                         <div className="thumbnail">
@@ -33,7 +33,7 @@ function Item({ sale, className, oneRow = false, data, key, checkCategory = true
                 </div>
             )}
             {oneRow && checkCategory && (
-                <div className={className} key={key}>
+                <div className={className}>
                     <div className="products">
                         {sale && <div className="offer">{sale}</div>}
                         <div className="thumbnail">

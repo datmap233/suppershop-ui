@@ -26,7 +26,7 @@ function Login() {
             setLogin((pre) => ({ ...pre, password: value }));
         }
     };
-    
+
     return (
         <>
             <div className={cx('container_fullwidth')}>
@@ -49,6 +49,20 @@ function Login() {
                                             name="user"
                                             value={login.user}
                                             onChange={setInput}
+                                            onKeyPress={(e) => {
+                                                if (e.code === 'Enter') {
+                                                    const fetchApi = async () => {
+                                                        const result = await authServices.login(login);
+                                                        if (result === 'Failed') {
+                                                            alert('Thất bại');
+                                                        } else {
+                                                            localStorage.setItem('Login', JSON.stringify(result.user));
+                                                            window.location.href = '/';
+                                                        }
+                                                    };
+                                                    fetchApi();
+                                                }
+                                            }}
                                         />
                                         <label className={cx('title', 'label-input')}>Username *</label>
                                     </div>
@@ -60,6 +74,20 @@ function Login() {
                                             onblur={checkInput}
                                             name="password"
                                             onChange={setInput}
+                                            onKeyPress={(e) => {
+                                                if (e.code === 'Enter') {
+                                                    const fetchApi = async () => {
+                                                        const result = await authServices.login(login);
+                                                        if (result === 'Failed') {
+                                                            alert('Thất bại');
+                                                        } else {
+                                                            localStorage.setItem('Login', JSON.stringify(result.user));
+                                                            window.location.href = '/';
+                                                        }
+                                                    };
+                                                    fetchApi();
+                                                }
+                                            }}
                                         />
                                         <label className={cx('title', 'label-input')}>Password *</label>
                                     </div>
@@ -69,13 +97,24 @@ function Login() {
                                         Forgot password?
                                     </a>
                                 </div>
-                                <button className={cx('btn', 'btn-full-width', 'blue')} onClick={()=>{
-                                    const fetchApi = async () => {
-                                        const result = await authServices.login(login);
-                                        console.log(result);
-                                    };
-                                    fetchApi();
-                                }}>Login</button>
+                                <button
+                                    className={cx('btn', 'btn-full-width', 'blue')}
+                                    onClick={() => {
+                                        const fetchApi = async () => {
+                                            const result = await authServices.login(login);
+                                            console.log(result);
+                                            if (result === undefined) {
+                                                alert('Failed');
+                                            } else {
+                                                localStorage.setItem('Login', JSON.stringify(result.user));
+                                                window.location.href = '/';
+                                            }
+                                        };
+                                        fetchApi();
+                                    }}
+                                >
+                                    Login
+                                </button>
                                 <a href="/register" className={cx('btn', 'btn-full-width', 'white')}>
                                     Don't have an account? Sign Up!
                                 </a>

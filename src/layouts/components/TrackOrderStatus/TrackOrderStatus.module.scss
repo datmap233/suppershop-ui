@@ -67,6 +67,10 @@ table {
         padding: 12px 0;
         & > .content {
             display: flex;
+            justify-content: space-between;
+            & span{
+                text-align: left;
+            }
         }
     }
 }
