@@ -105,11 +105,25 @@ function Register() {
                                 <button
                                     className={cx('btn', 'btn-full-width', 'blue')}
                                     onClick={() => {
-                                        const fetchApi = async () => {
-                                            const result = await authServices.signup(data);
-                                            console.log(result);
-                                        };
-                                        fetchApi();
+                                        if (
+                                            data.username !== '' &&
+                                            data.email !== '' &&
+                                            data.password !== '' &&
+                                            data.name !== '' &&
+                                            data.address !== ''
+                                        ) {
+                                            console.log(data.email.includes('@gmail.com'))
+                                            if (!data.email.includes('@gmail.com')) {
+                                                alert('Error email');
+                                            } else {
+                                                const fetchApi = async () => {
+                                                    const result = await authServices.signup(data);
+                                                    console.log(result);
+                                                };
+                                                fetchApi();
+                                                window.location.href = '/login';
+                                            }
+                                        } else alert('Please enter full information');
                                     }}
                                 >
                                     Register

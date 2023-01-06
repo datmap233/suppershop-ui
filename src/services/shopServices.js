@@ -26,7 +26,7 @@ export const getListProduct = async (shopId) => {
 };
 export const getNameUser = async (userId) => {
     try {
-        const res = await httpRequest.get(`/view_info`, {
+        const res = await httpRequest.get(`/user/view_info`, {
             params: {
                 userId: userId,
             },

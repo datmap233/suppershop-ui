@@ -83,6 +83,11 @@ function Header() {
                                                             </Button>
                                                         </li>
                                                         <li>
+                                                            <Button href="/message" className="reg">
+                                                                Message
+                                                            </Button>
+                                                        </li>
+                                                        <li>
                                                             <Button
                                                                 href="/"
                                                                 className="reg"

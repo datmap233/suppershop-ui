@@ -30,6 +30,18 @@ function Message() {
                                         <div className="mess-you">
                                             <p>Shop minh ban nhu the nao?</p>
                                         </div>
+                                        <div className="mess-me">
+                                            <p>Shop minh ban nhu the nao?</p>
+                                        </div>
+                                        <div className="mess-you">
+                                            <p>Shop minh ban nhu the nao?</p>
+                                        </div>
+                                        <div className="mess-me">
+                                            <p>Shop minh ban nhu the nao?</p>
+                                        </div>
+                                        <div className="mess-you">
+                                            <p>Shop minh ban nhu the nao?</p>
+                                        </div>
                                         {message.map((value, index) => {
                                             return (
                                                 <div key={index} className="mess-me">

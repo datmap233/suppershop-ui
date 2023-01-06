@@ -21,11 +21,13 @@ function Shop() {
         const fetchApi1 = async () => {
             const result = await shopServices.getNameShop(`${id}`);
             setNameShop(result.info);
+            console.log(result)
         };
         fetchApi1();
     }, []);
     useEffect(() => {
         const fetchApi = async () => {
+            console.log(nameShop.user_id)
             const result = await shopServices.getNameUser(`${nameShop.user_id}`);
             setNameUser(result.result);
         };

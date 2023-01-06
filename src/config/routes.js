@@ -5,7 +5,6 @@ const routes = {
     checkout: '/checkout',
     register: '/register',
     login: '/login',
-    forgotPassword: '/forgot-password',
     productsManage: '/products-manage',
     manageOrder: '/manage-order',
     salesManager: '/sales-manager',

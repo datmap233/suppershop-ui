@@ -2,7 +2,6 @@ import config from '~/config/';
 import AddProductPage from '~/pages/AddProduct';
 import CheckOutPage from '~/pages/CheckOut';
 import DetailsPage from '~/pages/Details';
-import ForgotPassswordPage from '~/pages/ForgotPasssword';
 
 //Layout
 import HomePage from '~/pages/Home';
@@ -23,7 +22,6 @@ const publicRoutes = [
     { path: config.routes.checkout, components: CheckOutPage },
     { path: config.routes.register, components: RegisterPage },
     { path: config.routes.login, components: LoginPage },
-    { path: config.routes.forgotPassword, components: ForgotPassswordPage },
     { path: config.routes.productsManage, components: ProductsManagePage },
     { path: config.routes.salesManager, components: SalesManagerPage },
     { path: config.routes.trackOrderStatus, components: TrackOrderStatusPage },

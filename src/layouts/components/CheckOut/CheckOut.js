@@ -23,6 +23,7 @@ function CheckOut() {
         const fetchApi = async () => {
             const result = await userServices.getDetail(JSON.parse(localStorage.getItem('Login')).id);
             setInfo(result.result);
+            console.log(result.result);
         };
         fetchApi();
     }, []);
@@ -53,7 +54,12 @@ function CheckOut() {
                                             Address
                                             <strong className="red">*</strong>
                                         </label>
-                                        <input type="text" className="input namefild" name="" value={info !== undefined && info.address}/>
+                                        <input
+                                            type="text"
+                                            className="input namefild"
+                                            name=""
+                                            value={info !== undefined && info.address}
+                                        />
                                     </div>
                                     {Object.keys(data).map(function (key) {
                                         return (
@@ -96,13 +102,14 @@ function CheckOut() {
                                         onClick={() => {
                                             const fetchApi = async () => {
                                                 const result = await orderServices.checkout({
-                                                    userId: 'bb9e74f3-e0e9-40a8-a633-6e026fccaf1b',
-                                                    address: '135 Tran Hung Dao',
+                                                    userId: info.user_id,
+                                                    address: info.address,
                                                     products: data,
                                                 });
                                                 console.log(result);
                                             };
                                             fetchApi();
+                                            localStorage.setItem('Cart', JSON.stringify([]));
                                         }}
                                     >
                                         Checkout

@@ -13,9 +13,9 @@ function AddProduct() {
         shopId: '3bdb8cd4-f8ae-4a99-b8cb-bf431f2ae9c6',
         name: '',
         description: '',
-        price: '',
+        price: 0,
         image: '',
-        remaining_stock: '',
+        remaining_stock: 0,
         categoryId: categories[0].id,
     });
     const setInput = (e) => {
@@ -73,12 +73,12 @@ function AddProduct() {
                         </div>
                         <div className="input-name-product">
                             <label>Price: </label>
-                            <input type="text" name="price" onChange={setInput} value={data.price} />
+                            <input type="number" name="price" onChange={setInput} value={data.price} />
                         </div>
                         <div className="input-name-product">
                             <label>Remaining stock</label>
                             <input
-                                type="text"
+                                type="number"
                                 name="remaining_stock"
                                 onChange={setInput}
                                 value={data.remaining_stock}
@@ -86,20 +86,17 @@ function AddProduct() {
                         </div>
                         <div className="input-name-product">
                             <label>Image link</label>
-                            <input
-                                type="text"
-                                name="imageD"
-                                onChange={setInput}
-                                value={data.imageD}
-                            />
+                            <input type="text" name="imageD" onChange={setInput} value={data.imageD} />
                         </div>
                         <button
                             onClick={() => {
-                                const fetchApi = async () => {
-                                    const result = await shopServices.addProduct(data);
-                                    console.log(result);
-                                };
-                                fetchApi();
+                                if (data.remaining_stock !== 0 && data.description !== '' && data.price !== 0) {
+                                    const fetchApi = async () => {
+                                        const result = await shopServices.addProduct(data);
+                                        console.log(result);
+                                    };
+                                    fetchApi();
+                                } else alert('Please enter full information');
                             }}
                         >
                             Add product

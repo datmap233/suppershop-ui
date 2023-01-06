@@ -93,11 +93,6 @@ function Login() {
                                         <label className={cx('title', 'label-input')}>Password *</label>
                                     </div>
                                 </div>
-                                <div className={cx('forgot-password')}>
-                                    <a class="link" href="/forgot-password">
-                                        Forgot password?
-                                    </a>
-                                </div>
                                 <button
                                     className={cx('btn', 'btn-full-width', 'blue')}
                                     onClick={() => {
