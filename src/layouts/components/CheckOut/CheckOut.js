@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import Button from '~/components/Button';
 import * as orderServices from '~/services/orderServices';
+import * as userServices from '~/services/userServices';
 import './CheckOut.scss';
 
 function CheckOut() {
     const [data, setData] = useState(JSON.parse(localStorage.getItem('Cart')));
+    const [info, setInfo] = useState();
     function format(n) {
         return n.toFixed(0).replace(/./g, function (c, i, a) {
             return i > 0 && c !== '.' && (a.length - i) % 3 === 0 ? '.' + c : c;
@@ -18,6 +20,11 @@ function CheckOut() {
             sum += value.unitPrice * value.quantity;
         }
         setSumPrice(sum);
+        const fetchApi = async () => {
+            const result = await userServices.getDetail(JSON.parse(localStorage.getItem('Login')).id);
+            setInfo(result.result);
+        };
+        fetchApi();
     }, []);
     return (
         <>
@@ -34,14 +41,19 @@ function CheckOut() {
                                             Name
                                             <strong className="red">*</strong>
                                         </label>
-                                        <input type="text" className="input namefild" name="" />
+                                        <input
+                                            type="text"
+                                            className="input namefild"
+                                            name=""
+                                            value={info !== undefined && info.name}
+                                        />
                                     </div>
                                     <div className="form-row">
                                         <label className="lebel-abs">
                                             Address
                                             <strong className="red">*</strong>
                                         </label>
-                                        <input type="text" className="input namefild" name="" />
+                                        <input type="text" className="input namefild" name="" value={info !== undefined && info.address}/>
                                     </div>
                                     {Object.keys(data).map(function (key) {
                                         return (

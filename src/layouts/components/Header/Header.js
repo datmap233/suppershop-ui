@@ -7,6 +7,7 @@ import Search from './Search';
 
 import HeadlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
+import { useEffect } from 'react';
 
 function Header() {
     return (

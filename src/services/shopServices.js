@@ -37,6 +37,19 @@ export const getNameUser = async (userId) => {
     }
 };
 
+export const isShop = async (userId) => {
+    try {
+        const res = await httpRequest.get(`/shop/isShop`, {
+            params: {
+                userId: 'df604262-4d47-48ff-9804-90b5921937e6',
+            },
+        });
+        return res;
+    } catch (error) {
+        console.log('error');
+    }
+};
+
 export const addProduct = async (data) => {
     try {
         const res = await httpRequest.post(`/shop/addProduct`, {

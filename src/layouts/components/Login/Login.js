@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import images from '~/assets/images';
 import { useState } from 'react';
 import * as authServices from '~/services/authServices';
+import * as shopServices from '~/services/shopServices';
 
 const cx = classNames.bind(styles);
 
@@ -106,6 +107,12 @@ function Login() {
                                             if (result === undefined) {
                                                 alert('Failed');
                                             } else {
+                                                const result1 = await shopServices.isShop(`${result.user.id}`);
+                                                var info = result.user;
+                                                if (result1.status === 'Success') {
+                                                    var temp = result1.message;
+                                                    info.shopId = temp.slice(13, -9);
+                                                }
                                                 localStorage.setItem('Login', JSON.stringify(result.user));
                                                 window.location.href = '/';
                                             }
