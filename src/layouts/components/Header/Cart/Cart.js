@@ -52,9 +52,11 @@ function Cart() {
                                     <sup>đ</sup>
                                 </strong>
                             </span>
-                            <Button className="checkout" onClick={() => (window.location.href = '/checkout')}>
-                                CheckOut
-                            </Button>
+                            {data !== undefined && data.length > 0 && (
+                                <Button className="checkout" onClick={() => (window.location.href = '/checkout')}>
+                                    CheckOut
+                                </Button>
+                            )}
                         </li>
                     </ul>
                 )}

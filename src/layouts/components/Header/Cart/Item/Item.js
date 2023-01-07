@@ -22,12 +22,12 @@ function Item({ data }) {
             <div className="item-description">
                 <p className="name">{data.name}</p>
                 <p>
-                    Quantity: <span className="light-red">{data.quantity}</span>
+                    Quantity: <span className="light-red">{parseInt(data.quantity)}</span>
                 </p>
             </div>
             <div className="right">
                 <p className="price">
-                    {format(data.unitPrice*data.quantity)}
+                    {format(data.unitPrice * parseInt(data.quantity))}
                     <sup>đ</sup>
                 </p>
                 <Button className="remove" onClick={handleOnClick}>

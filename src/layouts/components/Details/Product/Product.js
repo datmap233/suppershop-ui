@@ -35,7 +35,7 @@ function Product({ data }) {
                     ma: data.product_id,
                     image: data.image,
                     name: data.name,
-                    price: data.price,
+                    unitPrice: data.price,
                     quantity: quantity,
                 });
             }
